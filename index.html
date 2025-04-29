@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jason Gillan - Digital & IT Professional</title>
     <meta name="description" content="IT Professional with expertise in digital project delivery, GDPR compliance, and technical support based in Glasgow">
+    <meta name="keywords" content="IT Professional, Digital Project Delivery, GDPR Compliance, Technical Support, Glasgow">
+    <meta name="author" content="Jason Gillan">
+    <meta property="og:title" content="Jason Gillan - Digital & IT Professional">
+    <meta property="og:description" content="IT Professional with expertise in digital project delivery, GDPR compliance, and technical support based in Glasgow">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    <link rel="stylesheet" href="css/projects.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header__content">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
                 <h1>Jason Gillan</h1>
                 <p class="header__subtitle">Digital & IT Professional</p>
                 <div class="header__contact">
@@ -32,7 +44,15 @@
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#media">Featured</a></li>
+                <li><a href="#social">Connect</a></li>
             </ul>
+            <div class="nav__actions">
+                <button class="btn btn--download" onclick="downloadCV()">
+                    <i class="fas fa-download"></i> Download CV
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -139,50 +159,241 @@
             </div>
         </section>
 
-        <section id="skills" class="section">
+        <section id="skills" class="section py-5">
             <div class="container">
-                <h2 class="section__title">Professional Skills</h2>
-                <div class="skills__grid">
-                    <div class="skills__category">
-                        <h3>Technical & Digital</h3>
-                        <div class="skill-bars">
-                            <div class="skill-bar" data-level="90">
-                                <span class="skill-bar__title">IT Troubleshooting</span>
-                            </div>
-                            <div class="skill-bar" data-level="85">
-                                <span class="skill-bar__title">Digital Platform Management</span>
-                            </div>
-                            <div class="skill-bar" data-level="85">
-                                <span class="skill-bar__title">Microsoft Office</span>
+                <h2 class="section__title mb-5">Professional Skills</h2>
+                <div class="row g-4">
+                    <!-- Technical & Digital Skills Card -->
+                    <div class="col-md-4">
+                        <div class="card h-100 skills-card">
+                            <div class="card-body">
+                                <h3 class="card-title text-primary mb-4">
+                                    <i class="fas fa-laptop-code me-2"></i>Technical & Digital
+                                </h3>
+                                <div class="skills-list">
+                                    <div class="skill-item mb-4" data-skill="expert">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span class="skill-name">IT Support & Troubleshooting</span>
+                                            <span class="skill-level">Expert</span>
+                                        </div>
+                                        <div class="progress" style="height: 10px">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated skill-level-expert"></div>
+                                        </div>
+                                        <small class="text-muted">Hardware & Software Solutions</small>
+                                    </div>
+                                    
+                                    <div class="skill-item mb-4" data-skill="85">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span class="skill-name">Digital Platform Management</span>
+                                            <span class="skill-percentage">85%</span>
+                                        </div>
+                                        <div class="progress" style="height: 10px">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 85%"></div>
+                                        </div>
+                                        <small class="text-muted">Learning Management Systems, CMS</small>
+                                    </div>
+
+                                    <div class="skill-item mb-4" data-skill="90">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span class="skill-name">Microsoft Office Suite</span>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="progress" style="height: 10px">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%"></div>
+                                        </div>
+                                        <small class="text-muted">Advanced Excel, PowerPoint, Teams</small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="skills__category">
-                        <h3>Leadership & Management</h3>
-                        <div class="skill-bars">
-                            <div class="skill-bar" data-level="90">
-                                <span class="skill-bar__title">Team Management</span>
-                            </div>
-                            <div class="skill-bar" data-level="85">
-                                <span class="skill-bar__title">Event Coordination</span>
-                            </div>
-                            <div class="skill-bar" data-level="85">
-                                <span class="skill-bar__title">Training & Development</span>
+
+                    <!-- Leadership & Management Skills Card -->
+                    <div class="col-md-4">
+                        <div class="card h-100 skills-card">
+                            <div class="card-body">
+                                <h3 class="card-title text-primary mb-4">
+                                    <i class="fas fa-users me-2"></i>Leadership & Management
+                                </h3>
+                                <div class="skills-list">
+                                    <div class="skill-item mb-4" data-skill="90">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span class="skill-name">Team Leadership</span>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="progress" style="height: 10px">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%"></div>
+                                        </div>
+                                        <small class="text-muted">Staff Training & Development</small>
+                                    </div>
+
+                                    <div class="skill-item mb-4" data-skill="85">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span class="skill-name">Event Coordination</span>
+                                            <span class="skill-percentage">85%</span>
+                                        </div>
+                                        <div class="progress" style="height: 10px">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 85%"></div>
+                                        </div>
+                                        <small class="text-muted">Large Scale Event Management</small>
+                                    </div>
+
+                                    <div class="skill-item mb-4" data-skill="85">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span class="skill-name">Training & Development</span>
+                                            <span class="skill-percentage">85%</span>
+                                        </div>
+                                        <div class="progress" style="height: 10px">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 85%"></div>
+                                        </div>
+                                        <small class="text-muted">Workshop Facilitation & Mentoring</small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="skills__category">
-                        <h3>Compliance & Safety</h3>
-                        <div class="skill-bars">
-                            <div class="skill-bar" data-level="90">
-                                <span class="skill-bar__title">GDPR Compliance</span>
+
+                    <!-- Compliance & Safety Skills Card -->
+                    <div class="col-md-4">
+                        <div class="card h-100 skills-card">
+                            <div class="card-body">
+                                <h3 class="card-title text-primary mb-4">
+                                    <i class="fas fa-shield-alt me-2"></i>Compliance & Safety
+                                </h3>
+                                <div class="skills-list">
+                                    <div class="skill-item mb-4" data-skill="95">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span class="skill-name">GDPR Compliance</span>
+                                            <span class="skill-percentage">95%</span>
+                                        </div>
+                                        <div class="progress" style="height: 10px">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 95%"></div>
+                                        </div>
+                                        <small class="text-muted">ICO Officer Experience</small>
+                                    </div>
+
+                                    <div class="skill-item mb-4" data-skill="90">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span class="skill-name">Health & Safety</span>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="progress" style="height: 10px">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%"></div>
+                                        </div>
+                                        <small class="text-muted">Risk Assessment & Management</small>
+                                    </div>
+
+                                    <div class="skill-item mb-4" data-skill="85">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span class="skill-name">Food Safety</span>
+                                            <span class="skill-percentage">85%</span>
+                                        </div>
+                                        <div class="progress" style="height: 10px">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 85%"></div>
+                                        </div>
+                                        <small class="text-muted">Level 2 Certified</small>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="skill-bar" data-level="85">
-                                <span class="skill-bar__title">Health & Safety</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Portfolio Section -->
+        <section id="portfolio" class="section">
+            <div class="container">
+                <h2 class="section__title">Featured Projects</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="images/project1.jpg" alt="Digital Workshop Platform" class="img-fluid">
                             </div>
-                            <div class="skill-bar" data-level="85">
-                                <span class="skill-bar__title">Food Safety</span>
+                            <div class="portfolio-content">
+                                <h3>Digital Workshop Platform</h3>
+                                <p>Interactive learning platform for trauma-informed workshops</p>
+                                <div class="portfolio-tags">
+                                    <span class="badge bg-primary">LMS</span>
+                                    <span class="badge bg-secondary">Digital Learning</span>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Social Proof Section -->
+        <section id="social-proof" class="section section--gray">
+            <div class="container">
+                <h2 class="section__title">Professional Network</h2>
+                <div class="social-links text-center">
+                    <a href="https://linkedin.com/in/yourprofile" class="btn btn-outline-primary mx-2">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/yourprofile" class="btn btn-outline-dark mx-2">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section__title">Featured Projects</h2>
+                <div class="projects__filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="digital">Digital</button>
+                    <button class="filter-btn" data-filter="management">Management</button>
+                    <button class="filter-btn" data-filter="safety">Safety</button>
+                </div>
+                <div class="projects__grid">
+                    <article class="project-card" data-category="digital">
+                        <div class="project-card__image">
+                            <img src="images/projects/workshop-platform.jpg" alt="Digital Workshop Platform">
+                        </div>
+                        <div class="project-card__content">
+                            <h3>Digital Workshop Platform</h3>
+                            <p>Created and managed interactive learning platforms for trauma-informed workshops.</p>
+                            <div class="project-card__tags">
+                                <span class="tag">LMS</span>
+                                <span class="tag">Digital Learning</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Add more project cards -->
+                </div>
+            </div>
+        </section>
+
+        <section id="media" class="section section--gray">
+            <div class="container">
+                <h2 class="section__title">Featured In Media</h2>
+                <div class="media-grid">
+                    <div class="media-card">
+                        <div class="media-card__image">
+                            <img src="images/glasgow-lives.jpg" alt="Glasgow Lives Feature">
+                        </div>
+                        <div class="media-card__content">
+                            <h3>Glasgow Lives Feature</h3>
+                            <p>Featured in Glasgow Live discussing my journey and aspirations in the tech industry.</p>
+                            <a href="https://www.glasgowlive.co.uk/news/glasgow-news/glasgow-lives-jason-22-easterhouse-28995640" 
+                               class="btn btn--primary" target="_blank">Read Article</a>
+                        </div>
+                    </div>
+                    
+                    <div class="media-card">
+                        <div class="media-card__video">
+                            <iframe src="https://www.youtube.com/embed/lVYFQUa6T3w" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        <div class="media-card__content">
+                            <h3>Recent Project Showcase</h3>
+                            <p>Experience a demonstration of my latest digital project implementation.</p>
                         </div>
                     </div>
                 </div>
@@ -226,6 +437,31 @@
                         <p class="education__school">City of Glasgow College</p>
                         <p class="education__year">2022</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="social" class="section">
+            <div class="container">
+                <h2 class="section__title">Let's Connect</h2>
+                <div class="social-grid">
+                    <a href="https://github.com/MrJasonDEX" class="social-card github" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                        <p>Check out my code repositories</p>
+                    </a>
+                    
+                    <a href="https://linktr.ee/jasongillan" class="social-card linktree" target="_blank">
+                        <i class="fas fa-link"></i>
+                        <h3>Linktree</h3>
+                        <p>All my important links in one place</p>
+                    </a>
+                </div>
+                
+                <!-- GitHub Activity Feed -->
+                <div class="github-feed">
+                    <h3>Recent GitHub Activity</h3>
+                    <div id="github-activity"></div>
                 </div>
             </div>
         </section>

@@ -28,11 +28,12 @@
         </div>
     </nav>
 
-    <header class="hero vh-100 d-flex align-items-center">
+    <header class="hero vh-100 d-flex align-items-center position-relative overflow-hidden">
+        <div class="hero-bg"></div>
         <div class="container text-center">
-            <h1 class="display-1 fw-bold mb-4">Jason Gillan</h1>
-            <p class="lead mb-4">Glasgow, Scotland</p>
-            <p class="tagline mb-5">Reliable, Adaptable, and Creative — From Digital Projects to Real-World Problem Solving</p>
+            <h1 class="display-1 fw-bold mb-4 animate-in">Jason Gillan</h1>
+            <p class="lead mb-4">Digital Professional & Team Leader</p>
+            <p class="tagline mb-5 mx-auto mw-600">Motivated and adaptable professional with experience across IT, events, logistics, and hospitality. Combining technical skills with strong leadership abilities.</p>
             <div class="d-flex justify-content-center gap-3">
                 <a href="#contact" class="btn btn-primary btn-lg">Contact Me</a>
                 <a href="assets/JasonGillan-CV.pdf" class="btn btn-outline-light btn-lg" download>Download CV</a>
@@ -41,25 +42,51 @@
     </header>
 
     <main>
-        <!-- About Section -->
         <section id="about" class="section py-6">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7">
-                        <h2 class="display-4 mb-4">About Me</h2>
-                        <p class="lead mb-4">Motivated and adaptable professional with a mix of hands-on and digital experience across IT, events, logistics, and hospitality. I bring a practical mindset, problem-solving skills, and a strong work ethic to every role I take on.</p>
-                        <div class="personal-info">
-                            <div class="info-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Glasgow, SCT G34 9AR</span>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="about-card card border-0 shadow-lg p-4">
+                            <div class="card-body">
+                                <h2 class="display-4 mb-4">About Me</h2>
+                                <p class="lead mb-4">I've delivered creative digital projects, led teams at large-scale venues, and built confidence in tools like HTML, CSS, and Adobe Creative Cloud. Now seeking a full-time opportunity to contribute and grow — ideally in IT or digital.</p>
+                                <div class="key-points mt-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-check-circle text-primary me-3"></i>
+                                        <span>UK Work Eligible</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-graduation-cap text-primary me-3"></i>
+                                        <span>Certificate of Higher Education</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                                        <span>Glasgow, SCT G34 9AR</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="info-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>jasongillam6@gmail.com</span>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-phone"></i>
-                                <span>+44 7858 319985</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="skills-overview p-4">
+                            <h3 class="h4 mb-4">Core Competencies</h3>
+                            <div class="skill-grid">
+                                <div class="skill-item">
+                                    <i class="fas fa-laptop-code fa-2x mb-3"></i>
+                                    <h4 class="h6">Digital</h4>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-users fa-2x mb-3"></i>
+                                    <h4 class="h6">Leadership</h4>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-shield-alt fa-2x mb-3"></i>
+                                    <h4 class="h6">Compliance</h4>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-tasks fa-2x mb-3"></i>
+                                    <h4 class="h6">Management</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -67,125 +94,48 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
         <section id="experience" class="section py-6 bg-light">
             <div class="container">
                 <h2 class="display-4 text-center mb-5">Experience</h2>
-                <div class="timeline">
-                    <!-- Digital Role -->
-                    <div class="timeline-item">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-laptop-code text-primary fa-2x me-3"></i>
-                                    <div>
-                                        <h3 class="h4">Digital Assistant</h3>
-                                        <p class="text-muted mb-0">Articulate Cultural Trust-Glasgow | 2023-2025</p>
-                                    </div>
+                
+                <div class="experience-group mb-5">
+                    <h3 class="h4 mb-4">
+                        <i class="fas fa-laptop-code text-primary me-2"></i>
+                        Digital & IT
+                    </h3>
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div>
+                                    <h4>Digital Assistant</h4>
+                                    <p class="text-muted">Articulate Cultural Trust-Glasgow | Feb 2023 - Feb 2025</p>
                                 </div>
-                                <ul class="list-unstyled mb-0">
-                                    <li><i class="fas fa-check me-2 text-primary"></i>Delivered trauma-informed digital workshops</li>
-                                    <li><i class="fas fa-check me-2 text-primary"></i>Created interactive learning platforms</li>
-                                    <li><i class="fas fa-check me-2 text-primary"></i>GDPR compliance as ICO Officer</li>
-                                </ul>
                             </div>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Delivered trauma-informed digital workshops</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Created interactive learning platforms</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Ensured GDPR compliance as ICO Officer</li>
+                                <li><i class="fas fa-check text-primary me-2"></i>Handled live tech support and troubleshooting</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="section py-6">
             <div class="container">
                 <h2 class="display-4 text-center mb-5">Skills</h2>
                 <div class="row g-4">
-                    <!-- IT & Digital -->
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-3">
                         <div class="skill-card card h-100 border-0 shadow-sm">
                             <div class="card-body">
-                                <h3 class="h5 mb-4"><i class="fas fa-laptop-code text-primary me-2"></i>IT & Digital</h3>
+                                <h3 class="h5 mb-4">IT & Digital</h3>
                                 <div class="skill-tags">
                                     <span class="badge bg-primary-soft">HTML/CSS</span>
                                     <span class="badge bg-primary-soft">Microsoft Office</span>
                                     <span class="badge bg-primary-soft">IT Troubleshooting</span>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications Section -->
-        <section id="certifications" class="section py-6 bg-light">
-            <div class="container">
-                <h2 class="display-4 text-center mb-5">Certifications</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="cert-card card border-0 shadow-sm">
-                            <div class="card-body">
-                                <h3 class="h5 mb-4"><i class="fas fa-certificate text-primary me-2"></i>Digital & Compliance</h3>
-                                <ul class="list-unstyled cert-list">
-                                    <li><i class="fas fa-check me-2 text-primary"></i>GDPR & Cybersecurity Compliance</li>
-                                    <li><i class="fas fa-check me-2 text-primary"></i>Food Hygiene Safety Level 2</li>
-                                    <li><i class="fas fa-check me-2 text-primary"></i>Fire Warden Certification</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="section py-6">
-            <div class="container">
-                <h2 class="display-4 text-center mb-5">Education</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body">
-                                <h3 class="h5">HNC in Computing in Networking</h3>
-                                <p class="text-muted">City of Glasgow College | 2022</p>
-                                <p class="mb-0">Started HND but interrupted due to COVID-19</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section py-6">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="card border-0 shadow-lg">
-                            <div class="card-body p-5">
-                                <h2 class="display-4 text-center mb-4">Get in Touch</h2>
-                                <div class="contact-info text-center mb-5">
-                                    <p class="lead mb-3">
-                                        <i class="fas fa-envelope text-primary me-2"></i>
-                                        jasongillam6@gmail.com
-                                    </p>
-                                    <p class="lead">
-                                        <i class="fas fa-phone text-primary me-2"></i>
-                                        +44 7858 319985
-                                    </p>
-                                </div>
-                                <form>
-                                    <div class="mb-4">
-                                        <input type="text" class="form-control form-control-lg" placeholder="Your Name">
-                                    </div>
-                                    <div class="mb-4">
-                                        <input type="email" class="form-control form-control-lg" placeholder="Your Email">
-                                    </div>
-                                    <div class="mb-4">
-                                        <textarea class="form-control form-control-lg" rows="4" placeholder="Your Message"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
-                                </form>
                             </div>
                         </div>
                     </div>

@@ -100,6 +100,7 @@
             <div class="d-flex justify-content-center gap-3 mb-2">
                 <a href="#contact" class="btn btn-primary btn-lg">Contact Me</a>
                 <a href="assets/JasonGillan-CV.pdf" class="btn btn-outline-light btn-lg" download>Download CV</a>
+                <button class="btn btn-outline-primary btn-lg" onclick="window.print()"><i class="fas fa-file-pdf"></i> Save as PDF</button>
             </div>
             <!-- GitHub Stats Badges -->
             <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap">
@@ -163,9 +164,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 d-flex flex-column align-items-center">
+                        <!-- Profile Photo -->
+                        <img src="https://i2-prod.glasgowlive.co.uk/incoming/article28995671.ece/ALTERNATES/s810/0_GL-JASON-ARTIC-6805.jpg"
+                             alt="Jason Gillan" class="img-fluid rounded shadow mb-4" style="max-width:320px; width:100%; object-fit:cover;">
                         <!-- Side Hustles & Tech Focus -->
-                        <div class="skills-overview p-4">
+                        <div class="skills-overview p-4 w-100">
                             <h3 class="h5 mb-3">Side Hustles & Tech Focus</h3>
                             <ul class="list-unstyled mb-3">
                                 <li><i class="fas fa-gamepad text-info me-2"></i>Console modding (PS3/PS4/PS5, accessibility mods, homebrew)</li>
@@ -457,6 +461,31 @@
             </div>
         </section>
 
+        <!-- Fun Facts/Stats Section with Animated Counters -->
+        <section id="fun-facts" class="section py-6 bg-light" data-aos="fade-up">
+          <div class="container text-center">
+            <h2 class="display-5 mb-5">🚀 Quick Stats</h2>
+            <div class="row justify-content-center g-4">
+              <div class="col-6 col-md-3">
+                <div class="fs-1 fw-bold text-info" id="stat-years">0</div>
+                <div class="fs-5">Years Experience</div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="fs-1 fw-bold text-info" id="stat-projects">0</div>
+                <div class="fs-5">Projects</div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="fs-1 fw-bold text-info" id="stat-clients">0</div>
+                <div class="fs-5">Happy Clients</div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="fs-1 fw-bold text-info" id="stat-coffee">0</div>
+                <div class="fs-5">Cups of Coffee</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
     </main>
 
     <!-- Move Connect & Support section here, just before the footer -->
@@ -497,8 +526,8 @@
                 <div class="col-md-6">
                     <div class="d-flex gap-3 justify-content-center justify-content-md-end">
                         <a href="#about" class="text-light">About</a>
-                        <a href="#projects" class="text-light">Projects</a>
-                        <a href="#skills" class="text-light">Skills</a>
+                        <a href="#projects-expanded" class="text-light">Projects</a>
+                        <a href="#tech-skills" class="text-light">Skills</a>
                         <a href="#contact" class="text-light">Contact</a>
                     </div>
                 </div>
@@ -812,6 +841,30 @@
     }
     window.startWAM = startWAM;
     setTimeout(drawWAM, 500);
+
+    // Animated counters for Fun Facts
+    function animateCounter(id, end, duration = 1200) {
+      const el = document.getElementById(id);
+      let start = 0;
+      const step = Math.max(1, Math.ceil(end / (duration / 30)));
+      const timer = setInterval(() => {
+        start += step;
+        if (start >= end) {
+          el.textContent = end;
+          clearInterval(timer);
+        } else {
+          el.textContent = start;
+        }
+      }, 30);
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      animateCounter('stat-years', 5);
+      animateCounter('stat-projects', 18);
+      animateCounter('stat-clients', 12);
+      animateCounter('stat-coffee', 999);
+    });
+
+    // --- End of Improved Mini Games JS ---
     </script>
     <style>
     /* Visually hidden but focusable for skip link */
@@ -833,33 +886,8 @@
       outline: 2px solid #fff;
       border-radius: 4px;
     }
-    .press-card {
-    border-radius: 1.25rem;
-    box-shadow: 0 2px 24px 0 rgba(79,140,255,0.10), 0 1.5px 8px 0 rgba(0,0,0,0.10);
-    transition: transform .2s, box-shadow .2s;
-    margin-bottom: 2rem;
-}
-.press-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 32px rgba(79,140,255,0.18), 0 2px 12px rgba(0,0,0,0.12);
-    border-color: #4f8cff;
-    z-index: 2;
-}
-.section {
-    margin-bottom: 3.5rem !important;
-    padding-top: 4rem !important;
-    padding-bottom: 4rem !important;
-}
-@media (max-width: 768px) {
-    .section {
-        margin-bottom: 2rem !important;
-        padding-top: 2rem !important;
-        padding-bottom: 2rem !important;
-    }
-    .press-card {
-        margin-bottom: 1.5rem;
-    }
-}
     </style>
+    <!-- Sienna Widget Script -->
+    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
 </body>
 </html>

@@ -140,8 +140,11 @@ h1, h2, h3, h4, h5, h6 {
     }
     .section {
         margin-bottom: 2rem !important;
-        padding-top: 2.5rem !important;
+        padding-top: 5rem !important;
         padding-bottom: 2.5rem !important;
+    }
+    .hero {
+        min-height: 60vh;
     }
     .card {
         margin-bottom: 1.5rem;
@@ -278,4 +281,19 @@ a:focus, button:focus, .project-card:focus, input:focus, textarea:focus {
 /* Minimal custom overrides for smooth transitions and accessibility */
 body, .card, .modal-content, .navbar, .footer {
   transition: background 0.3s, color 0.3s;
+}
+
+/* Fix for content hidden under fixed navbar and section spacing */
+.section {
+    margin-bottom: 3.5rem !important;
+    padding-top: 7rem !important; /* Increased to clear navbar */
+    padding-bottom: 4rem !important;
+}
+
+/* Ensure .container is not hidden or too narrow */
+.container, .container-lg {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }

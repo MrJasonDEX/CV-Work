@@ -57,8 +57,11 @@
     -->
     <meta name="keywords" content="Jason Gillan, IT, Cybersecurity, Console Modding, Portfolio, Glasgow">
     <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="assets/icon-192.png">
 </head>
 <body>
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="visually-hidden-focusable bg-primary text-white px-3 py-2 position-absolute" style="z-index:999;top:8px;left:8px;">Skip to main content</a>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent" aria-label="Main navigation">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -104,7 +107,20 @@
         </div>
     </header>
 
-    <main role="main">
+    <main role="main" id="main-content">
+        <!-- Personal Info Section -->
+        <section id="personal-info" class="section py-6" data-aos="fade-up">
+            <div class="container">
+                <h2 class="display-5 mb-4">🧑 Personal Info</h2>
+                <ul class="list-group list-group-flush mb-3">
+                    <li class="list-group-item bg-transparent border-0"><strong>Name:</strong> Jason Gillan</li>
+                    <li class="list-group-item bg-transparent border-0"><strong>Location:</strong> Glasgow, Scotland </li>
+                    <li class="list-group-item bg-transparent border-0"><strong>Eligible to work in the UK:</strong> <span class="text-success">✅ Yes</span></li>
+                    <li class="list-group-item bg-transparent border-0"><strong>Driving License:</strong> <span class="text-danger">❌ No</span> (relies on public transport – 310 or 255 buses)</li>
+                </ul>
+            </div>
+        </section>
+
         <!-- About Me -->
         <section id="about" class="section py-6" data-aos="fade-up">
             <div class="container">
@@ -166,252 +182,252 @@
             </div>
         </section>
 
-        <!-- Featured Projects -->
-        <section id="projects" class="section py-6 bg-light" tabindex="-1" aria-labelledby="projects-heading">
+        <!-- Education Section (expanded) -->
+        <section id="education" class="section py-6" data-aos="fade-up">
             <div class="container">
-                <h2 class="display-5 text-center mb-5" id="projects-heading">Featured Projects</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card h-100 shadow-sm project-card" tabindex="0" role="button" aria-label="More info about My CV Website" data-bs-toggle="modal" data-bs-target="#projectModal1">
-                            <div class="card-body">
-                                <h4 class="card-title">My CV Website</h4>
-                                <p class="card-text">This portfolio site: digital CV, project showcase, and personal brand hub.</p>
-                                <a href="https://mrjasondex.github.io/CV-Work/" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">View Site</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 shadow-sm project-card" tabindex="0" role="button" aria-label="More info about Garage Site" data-bs-toggle="modal" data-bs-target="#projectModal2">
-                            <div class="card-body">
-                                <h4 class="card-title">Garage Site</h4>
-                                <p class="card-text">A dedicated garage for ethical console modding resources, guides, and community tools.</p>
-                                <a href="garage.html" class="btn btn-outline-secondary btn-sm">Visit Garage</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 shadow-sm project-card" tabindex="0" role="button" aria-label="More info about GitHub Repos" data-bs-toggle="modal" data-bs-target="#projectModal3">
-                            <div class="card-body">
-                                <h4 class="card-title">GitHub Repos</h4>
-                                <ul class="mb-2">
-                                    <li><a href="https://github.com/MrJasonDex" target="_blank" rel="noopener">Personal Scripts & Tools</a></li>
-                                    <li><a href="https://github.com/MrJasonDex/automation-scripts" target="_blank" rel="noopener">Automation Scripts (Raspberry Pi/Python)</a></li>
-                                    <li><a href="https://github.com/MrJasonDex/console-mods" target="_blank" rel="noopener">Console Mods & Tools</a></li>
-                                </ul>
-                                <a href="https://github.com/MrJasonDex" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">GitHub Profile</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Project Modals -->
-            <div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="projectModal1Label">My CV Website</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>This site is my digital CV, project showcase, and personal brand hub. Built with accessibility, performance, and storytelling in mind.</p>
-                            <a href="https://mrjasondex.github.io/CV-Work/" class="btn btn-primary" target="_blank" rel="noopener">Visit Site</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="projectModal2" tabindex="-1" aria-labelledby="projectModal2Label" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="projectModal2Label">Garage Site</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>The Garage is your go-to spot for ethical console modding resources, guides, and community-driven tools. Explore tutorials, scripts, and safe modding practices.</p>
-                            <a href="garage.html" class="btn btn-primary" target="_blank" rel="noopener">Visit Garage</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModal3Label" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="projectModal3Label">GitHub Repos</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <ul>
-                                <li><a href="https://github.com/MrJasonDex" target="_blank" rel="noopener">Personal Scripts & Tools</a></li>
-                                <li><a href="https://github.com/MrJasonDex/automation-scripts" target="_blank" rel="noopener">Automation Scripts (Raspberry Pi/Python)</a></li>
-                                <li><a href="https://github.com/MrJasonDex/console-mods" target="_blank" rel="noopener">Console Mods & Tools</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <h2 class="display-5 text-center mb-5">📚 Education</h2>
+                <ul class="list-group list-group-flush mx-auto" style="max-width: 600px;">
+                    <li class="list-group-item bg-transparent border-0">Highest Qualification: Certificate of Higher Education</li>
+                    <li class="list-group-item bg-transparent border-0">Not currently in education and has no plans to return</li>
+                </ul>
             </div>
         </section>
 
-        <!-- Past Projects & Impact -->
-        <section id="impact" class="section py-6">
+        <!-- Employment History Section -->
+        <section id="employment" class="section py-6" data-aos="fade-up">
             <div class="container">
-                <h2 class="display-5 text-center mb-5">Past Projects & Impact</h2>
+                <h2 class="display-5 text-center mb-5">💼 Employment History</h2>
                 <div class="row g-4">
                     <div class="col-md-6">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-body">
-                                <h4>The Vault</h4>
-                                <p>Secure document storage platform for Articulate Cultural Trust.</p>
-                                <h4>Buddy AI</h4>
-                                <p>Empathetic digital assistant for trauma-informed support.</p>
-                                <h4>The Studio</h4>
-                                <p>120+ creative courses delivered with trauma-informed design.</p>
-                                <h4>The Gallery</h4>
-                                <p>Digital art and community showcase platform.</p>
+                        <h4>Hospitality & Events</h4>
+                        <ul>
+                            <li><strong>Bartender</strong> at Hamilton Racecourse & Hampden – Suites/boxes, food/drink service</li>
+                            <li><strong>Team Leader & Cook</strong> at Celtic Park – Managed staff, ensured smooth matchday operation</li>
+                            <li><strong>Title Worker</strong> at Centerplate – Celtic Park</li>
+                        </ul>
+                        <h4>Cleaning</h4>
+                        <ul>
+                            <li><strong>Touchpoint Cleaning</strong> at BT building during COVID-19 – Helped contain virus, supported 999 call centre</li>
+                            <li>General office and kitchen cleaning duties</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>IT & Digital (Freelance & Personal)</h4>
+                        <ul>
+                            <li>Freelance IT technician (registered with UTR)</li>
+                            <li>Built tools/scripts: PSN friend manager, Raspberry Pi projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section (expanded) -->
+        <section id="tech-skills" class="section py-6" data-aos="fade-up">
+            <div class="container">
+                <h2 class="display-5 text-center mb-5">💻 Technical Skills</h2>
+                <ul class="list-group list-group-flush mx-auto" style="max-width: 600px;">
+                    <li class="list-group-item bg-transparent border-0"><strong>Languages:</strong> HTML, CSS, PHP, React, Java (hobby)</li>
+                    <li class="list-group-item bg-transparent border-0"><strong>Tools:</strong> GitHub Pages, Raspberry Pi, VS Code, Terminal</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Section (split by status) -->
+        <section id="projects-expanded" class="section py-6 bg-light" data-aos="fade-up">
+            <div class="container">
+                <h2 class="display-5 text-center mb-5">🛠️ Projects</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="mb-3 text-info">In Progress</h4>
+                        <ul class="list-group list-group-flush mb-4">
+                            <li class="list-group-item bg-transparent border-0">
+                                <strong>PSN Friend Management Tool:</strong> Unfriends all PSN friends except those in a .txt list. GUI-based, cookie login, logging, backups, alerts.
+                            </li>
+                            <li class="list-group-item bg-transparent border-0">
+                                <strong>Raspberry Pi AI Chatbot</strong>
+                            </li>
+                        </ul>
+                        <h4 class="mb-3 text-warning">Pending</h4>
+                        <ul class="list-group list-group-flush mb-4">
+                            <li class="list-group-item bg-transparent border-0"><strong>Digital Workshop Platform</strong></li>
+                            <li class="list-group-item bg-transparent border-0"><strong>Cloud Storage App</strong></li>
+                            <li class="list-group-item bg-transparent border-0"><strong>Dotted Ballon’s:</strong> Personalised balloon e-commerce site with animations</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="mb-3 text-success">Achieved</h4>
+                        <ul class="list-group list-group-flush mb-4">
+                            <li class="list-group-item bg-transparent border-0"><strong>Garage automation prototype site</strong></li>
+                        </ul>
+                        <h4 class="mb-3 text-primary">Building</h4>
+                        <ul class="list-group list-group-flush mb-4">
+                            <li class="list-group-item bg-transparent border-0"><strong>Portfolio website</strong> (includes About, Projects, Skills)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business/Startup Interests Section -->
+        <section id="business" class="section py-6" data-aos="fade-up">
+            <div class="container">
+                <h2 class="display-5 text-center mb-5">🛍️ Business/Startup Interests</h2>
+                <div class="text-center fs-5">
+                    While I'm doing stuff, I'm always looking to support small local businesses achieving their goals as a freelancer.<br>
+                    <strong>Need some help? <a href="#contact" class="text-info">Contact me :)</a></strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mini Games Section (improved) -->
+        <section id="mini-games" class="section py-6" data-aos="fade-up">
+            <div class="container">
+                <h2 class="display-5 text-center mb-5">🎮 Mini Games (JavaScript Demos)</h2>
+                <div class="row g-4">
+                    <!-- Rock Paper Scissors (with emoji, larger buttons, score) -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 p-3 text-center">
+                            <h4 class="mb-3">Rock Paper Scissors</h4>
+                            <div id="rps-game">
+                                <div class="mb-2">
+                                    <button class="btn btn-primary btn-lg mx-1" onclick="playRPS('rock')">✊</button>
+                                    <button class="btn btn-primary btn-lg mx-1" onclick="playRPS('paper')">✋</button>
+                                    <button class="btn btn-primary btn-lg mx-1" onclick="playRPS('scissors')">✌️</button>
+                                </div>
+                                <div id="rps-result" class="mt-2 fw-bold"></div>
+                                <div id="rps-score" class="mt-1 small"></div>
                             </div>
                         </div>
                     </div>
+                    <!-- Number Guess (with range, feedback, and reset) -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 p-3 text-center">
+                            <h4 class="mb-3">Number Guess</h4>
+                            <div id="guess-game">
+                                <input type="number" id="guess-input" class="form-control form-control-lg mb-2 text-center" placeholder="1-20" min="1" max="20" style="width:100px;display:inline-block;">
+                                <button class="btn btn-primary btn-lg" onclick="checkGuess()">Guess</button>
+                                <div id="guess-result" class="mt-2 fw-bold"></div>
+                                <button class="btn btn-outline-primary btn-sm mt-2" onclick="resetGuess()">Restart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Memory Flip (larger, emoji, fun colors) -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 p-3 text-center">
+                            <h4 class="mb-3">Memory Flip</h4>
+                            <div id="memory-game" class="d-flex flex-wrap gap-2 justify-content-center" style="max-width:220px;"></div>
+                            <div id="memory-result" class="mt-2 fw-bold"></div>
+                            <button class="btn btn-outline-primary btn-sm mt-2" onclick="initMemory()">Restart</button>
+                        </div>
+                    </div>
+                    <!-- Tic Tac Toe (bigger, emoji, fun colors) -->
+                    <div class="col-md-6 col-lg-6">
+                        <div class="card h-100 p-3 text-center">
+                            <h4 class="mb-3">Tic Tac Toe</h4>
+                            <div id="ttt-board" class="d-flex flex-wrap justify-content-center" style="width:180px;"></div>
+                            <div id="ttt-result" class="mt-2 fw-bold"></div>
+                            <button class="btn btn-outline-primary btn-sm mt-2" onclick="resetTTT()">Restart</button>
+                        </div>
+                    </div>
+                    <!-- Whack-a-Mole (bigger, fun, emoji, timer bar) -->
+                    <div class="col-md-6 col-lg-6">
+                        <div class="card h-100 p-3 text-center">
+                            <h4 class="mb-3">Whack-a-Mole</h4>
+                            <div id="wam-board" class="d-flex flex-wrap justify-content-center" style="width:180px;"></div>
+                            <div id="wam-score" class="mt-2 fw-bold"></div>
+                            <div class="progress my-2" style="height: 10px;">
+                                <div id="wam-timerbar" class="progress-bar bg-info" style="width:0%"></div>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm mt-2" onclick="startWAM()">Start</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Press & Media Section (improved) -->
+        <section id="press-media" class="section py-6 bg-light" data-aos="fade-up">
+            <div class="container">
+                <h2 class="display-5 text-center mb-5">📰 Press & Media</h2>
+                <div class="row justify-content-center g-4">
+                    <!-- Article 1 -->
                     <div class="col-md-6">
-                        <img src="assets/community-work.jpg" alt="Community work at Articulate Cultural Trust" class="img-fluid rounded shadow mb-3" loading="lazy">
-                        <p class="mb-0">Building accessible, trauma-informed digital platforms for the Glasgow community with Articulate Cultural Trust.</p>
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <h5 class="card-title mb-2">
+                                    <i class="fas fa-newspaper text-info me-2"></i>
+                                    Glasgow Times
+                                </h5>
+                                <p class="card-text mb-3">
+                                    <strong>Glasgow man denies City of Glasgow College computer hacks</strong>
+                                </p>
+                                <a href="https://www.glasgowtimes.co.uk/news/19014482.glasgow-man-denies-city-glasgow-college-computer-hacks/" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-external-link-alt me-1"></i> Read Article
+                                </a>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 small text-muted"></div>
+                                Published by Glasgow Times
+                            </div>
+                        </div>
                     </div>
+                    <!-- Article 2 -->
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <h5 class="card-title mb-2">
+                                    <i class="fas fa-user text-success me-2"></i>
+                                    Glasgow Live
+                                </h5>
+                                <p class="card-text mb-3">
+                                    <strong>Glasgow Lives - Jason, 22, Easterhouse</strong>
+                                </p>
+                                <a href="https://www.glasgowlive.co.uk/news/glasgow-news/glasgow-lives-jason-22-easterhouse-28995640?fbclid=IwY2xjawIb6phleHRuA2FlbQIxMQABHW0FFJgPpH6swp12p7MwGCNrWiK5WKwQuS6A1qLNRZKSTz8_MSrCUTtuNw_aem_sARZqvUIk0AzZW6mDxLQEQ" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-external-link-alt me-1"></i> Read Article
+                                </a>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 small text-muted">
+                                Published by Glasgow Live
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <span class="text-secondary">Want to feature or interview me? <a href="#contact" class="text-info">Get in touch!</a></span>
                 </div>
             </div>
         </section>
 
-        <!-- Press & Recognition -->
-        <section id="press" class="section py-6 bg-light">
-            <div class="container">
-                <h2 class="display-5 text-center mb-4">Press & Recognition</h2>
-                <blockquote class="blockquote text-center">
-                    <p class="mb-3">"Jason Gillan's journey through a high-profile computer hacking case highlights the ethics and complexity of modern digital work."</p>
-                    <footer class="blockquote-footer">
-                        <a href="https://www.glasgowtimes.co.uk/news/your-link-here" target="_blank">Glasgow Times</a>
-                    </footer>
-                </blockquote>
-            </div>
-        </section>
-
-        <!-- Work Snapshot -->
-        <section id="work" class="section py-6">
-            <div class="container">
-                <h2 class="display-5 text-center mb-5">Work Snapshot</h2>
-                <ul class="list-group list-group-flush mx-auto" style="max-width: 600px;">
-                    <li class="list-group-item"><strong>Digital Assistant</strong> at Articulate Cultural Trust (2023–2025)</li>
-                    <li class="list-group-item"><strong>Hospitality Team Leader & Cook</strong> at Celtic Park & Hampden (2022–2024)</li>
-                    <li class="list-group-item"><strong>COVID Safety Cleaner</strong> at BT Building / 999 Centre (2021)</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Console Modding & Gaming -->
-        <section id="modding" class="section py-6 bg-light">
-            <div class="container">
-                <h2 class="display-5 text-center mb-5">Console Modding & Gaming</h2>
-                <ul class="list-inline text-center">
-                    <li class="list-inline-item m-2"><span class="badge bg-dark text-light">PS3/PS4/PS5 Mods</span></li>
-                    <li class="list-inline-item m-2"><span class="badge bg-dark text-light">Accessibility Mods</span></li>
-                    <li class="list-inline-item m-2"><span class="badge bg-dark text-light">Homebrew Tooling</span></li>
-                    <li class="list-inline-item m-2"><span class="badge bg-dark text-light">Community Contributions</span></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Tech Skills -->
-        <section id="skills" class="section py-6">
-            <div class="container">
-                <h2 class="display-5 text-center mb-5">Tech Skills</h2>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-2 col-6 text-center">
-                        <span class="badge bg-primary-soft mb-2">HTML</span>
-                        <span class="badge bg-primary-soft mb-2">CSS</span>
-                        <span class="badge bg-primary-soft mb-2">JavaScript</span>
-                    </div>
-                    <div class="col-md-2 col-6 text-center">
-                        <span class="badge bg-primary-soft mb-2">Python</span>
-                        <span class="badge bg-primary-soft mb-2">C#</span>
-                        <span class="badge bg-primary-soft mb-2">Raspberry Pi</span>
-                    </div>
-                    <div class="col-md-2 col-6 text-center">
-                        <span class="badge bg-primary-soft mb-2">Cybersecurity</span>
-                        <span class="badge bg-primary-soft mb-2">GDPR</span>
-                        <span class="badge bg-primary-soft mb-2">Accessibility</span>
-                    </div>
-                    <div class="col-md-2 col-6 text-center">
-                        <span class="badge bg-primary-soft mb-2">Gaming Modding Tools</span>
-                        <span class="badge bg-primary-soft mb-2">Automation</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Current Learning & Exploration -->
-        <section id="learning" class="section py-6 bg-light">
-            <div class="container">
-                <h2 class="display-5 text-center mb-5">Current Learning & Exploration</h2>
-                <ul class="list-unstyled text-center">
-                    <li>Ethical hacking labs & certifications</li>
-                    <li>Python automation for consoles</li>
-                    <li>Mini tools development</li>
-                    <li>Raspberry Pi sensor automation</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Education & Certifications -->
-        <section id="education" class="section py-6">
-            <div class="container">
-                <h2 class="display-5 text-center mb-5">Education & Certifications</h2>
-                <ul class="list-group list-group-flush mx-auto" style="max-width: 600px;">
-                    <li class="list-group-item">HNC & NC Computing</li>
-                    <li class="list-group-item">GDPR Certification</li>
-                    <li class="list-group-item">Cybersecurity Certification</li>
-                    <li class="list-group-item">Food Safety, First Aid, Fire Warden</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Recognition & Volunteering -->
-        <section id="volunteering" class="section py-6 bg-light">
-            <div class="container">
-                <h2 class="display-5 text-center mb-5">Recognition & Volunteering</h2>
-                <ul class="list-unstyled text-center">
-                    <li>Creative Assistant Program</li>
-                    <li>Fundraising & film projects</li>
-                    <li>Local volunteering & community support</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Contact Form -->
-        <section id="contact" class="section py-6" aria-labelledby="contact-heading">
-            <div class="container text-center">
-                <h2 class="display-5 mb-4" id="contact-heading">Connect & Support</h2>
-                <div class="d-flex justify-content-center gap-3 mb-3 flex-wrap" aria-label="Social links">
-                    <a href="https://linkedin.com/in/your-link" class="text-primary fs-3" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://facebook.com/your-link" class="text-primary fs-3" aria-label="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://youtube.com/your-link" class="text-danger fs-3" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="https://github.com/MrJasonDex" class="text-dark fs-3" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                </div>
-                <a href="https://paypal.me/your-link" class="btn btn-outline-success mb-4" target="_blank" rel="noopener"><i class="fab fa-paypal"></i> Support via PayPal</a>
-                <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form mx-auto" style="max-width:400px;" aria-label="Contact form">
-                    <div class="mb-3 text-start">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" name="name" id="name" class="form-control" required aria-required="true" autocomplete="name">
-                    </div>
-                    <div class="mb-3 text-start">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" name="_replyto" id="email" class="form-control" required aria-required="true" autocomplete="email">
-                    </div>
-                    <div class="mb-3 text-start">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea name="message" id="message" class="form-control" rows="4" required aria-required="true"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                </form>
-            </div>
-        </section>
     </main>
+
+    <!-- Move Connect & Support section here, just before the footer -->
+    <section id="contact" class="section py-6" aria-labelledby="contact-heading">
+        <div class="container text-center">
+            <h2 class="display-5 mb-4" id="contact-heading">Connect & Support</h2>
+            <div class="d-flex justify-content-center gap-3 mb-3 flex-wrap" aria-label="Social links">
+                <a href="https://uk.linkedin.com/in/jason-gillan-6074182a6?utm_source=chatgpt.com" class="text-primary fs-3" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://facebook.com/your-link" class="text-primary fs-3" aria-label="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@MrJasonDEX" class="text-danger fs-3" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com/MrJasonDEX" class="text-dark fs-3" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <a href="https://paypal.me/your-link" class="btn btn-outline-success mb-4" target="_blank" rel="noopener"><i class="fab fa-paypal"></i> Support via PayPal</a>
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form mx-auto" style="max-width:400px;" aria-label="Contact form">
+                <div class="mb-3 text-start">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" name="name" id="name" class="form-control" required aria-required="true" autocomplete="name">
+                </div>
+                <div class="mb-3 text-start">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="_replyto" id="email" class="form-control" required aria-required="true" autocomplete="email">
+                </div>
+                <div class="mb-3 text-start">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea name="message" id="message" class="form-control" rows="4" required aria-required="true"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            </form>
+        </div>
+    </section>
 
     <footer class="footer py-4 bg-dark text-light">
         <div class="container">
@@ -431,9 +447,48 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" aria-label="Back to top" class="btn btn-primary rounded-circle position-fixed" style="bottom:32px;right:32px;display:none;z-index:999;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Live Clock Widget (top right corner) -->
+    <div id="live-clock" style="position:fixed;top:12px;right:16px;z-index:9999;font-size:1.1rem;color:#4f8cff;font-family:monospace;"></div>
+
+    <!-- Theme Color Picker (bottom left) -->
+    <div style="position:fixed;bottom:24px;left:24px;z-index:9999;">
+      <label for="colorPicker" class="me-2" style="color:#4f8cff;">Accent:</label>
+      <input type="color" id="colorPicker" value="#4f8cff" style="width:32px;height:32px;border:none;">
+    </div>
+
+    <!-- QR Code Generator Modal -->
+    <div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="qrModalLabel">QR Code Generator</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <input id="qrInput" class="form-control mb-3" placeholder="Enter URL or text" value="https://mrjasondex.github.io/CV-Work/">
+            <div id="qrCode"></div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" onclick="generateQR()">Generate</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- QR Button (bottom right) -->
+    <button class="btn btn-outline-primary rounded-circle" style="position:fixed;bottom:24px;right:90px;z-index:9999;width:48px;height:48px;" title="QR Code Generator" data-bs-toggle="modal" data-bs-target="#qrModal">
+      <i class="fas fa-qrcode"></i>
+    </button>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- QRCode.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
     <script>
     // Bootswatch theme toggle logic (only this for dark mode)
     const darkToggle = document.getElementById('darkModeToggle');
@@ -473,6 +528,252 @@
       }
     });
     AOS.init();
+
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Live Clock
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('live-clock').textContent =
+        now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
+    }
+    setInterval(updateClock, 1000); updateClock();
+
+    // Theme Color Picker
+    const colorPicker = document.getElementById('colorPicker');
+    colorPicker.addEventListener('input', e => {
+      document.documentElement.style.setProperty('--accent', e.target.value);
+      // Update accent color for buttons/links
+      document.querySelectorAll('.btn-primary,.btn-outline-primary,.text-info').forEach(el => {
+        el.style.backgroundColor = e.target.value;
+        el.style.borderColor = e.target.value;
+        el.style.color = '#fff';
+      });
+      document.querySelectorAll('a, .nav-link, .btn-link').forEach(el => {
+        el.style.color = e.target.value;
+      });
+    });
+
+    // QR Code Generator
+    let qr;
+    function generateQR() {
+      const val = document.getElementById('qrInput').value || window.location.href;
+      if (!qr) qr = new QRious({element:document.createElement('canvas'), size:180});
+      qr.value = val;
+      document.getElementById('qrCode').innerHTML = '';
+      document.getElementById('qrCode').appendChild(qr.image);
+    }
+    document.getElementById('qrModal').addEventListener('shown.bs.modal', generateQR);
+
+    // Konami Code Easter Egg
+    const konami = [38,38,40,40,37,39,37,39,66,65];
+    let kIndex = 0;
+    document.addEventListener('keydown', function(e) {
+      if (e.keyCode === konami[kIndex]) {
+        kIndex++;
+        if (kIndex === konami.length) {
+          alert('🎉 Secret Unlocked! You found the Konami Code!');
+          kIndex = 0;
+        }
+      } else {
+        kIndex = 0;
+      }
+    });
+
+    // --- Improved Mini Games JS ---
+
+    // 1. Rock Paper Scissors (with emoji, score)
+    let rpsScore = {win:0, lose:0, draw:0};
+    function playRPS(user) {
+        const choices = ['rock', 'paper', 'scissors'];
+        const emoji = {rock:'✊', paper:'✋', scissors:'✌️'};
+        const comp = choices[Math.floor(Math.random() * 3)];
+        let result = '';
+        if (user === comp) { result = "It's a draw!"; rpsScore.draw++; }
+        else if ((user === 'rock' && comp === 'scissors') || (user === 'paper' && comp === 'rock') || (user === 'scissors' && comp === 'paper')) { result = 'You win!'; rpsScore.win++; }
+        else { result = 'You lose!'; rpsScore.lose++; }
+        document.getElementById('rps-result').innerHTML = `You: <b>${emoji[user]}</b> | Computer: <b>${emoji[comp]}</b><br><b>${result}</b>`;
+        document.getElementById('rps-score').innerHTML = `Wins: ${rpsScore.win} | Losses: ${rpsScore.lose} | Draws: ${rpsScore.draw}`;
+    }
+
+    // 2. Number Guess (1-20, feedback, reset)
+    let guessNumber = Math.floor(Math.random() * 20) + 1;
+    let guessTries = 0;
+    function checkGuess() {
+        const val = parseInt(document.getElementById('guess-input').value, 10);
+        guessTries++;
+        if (val === guessNumber) {
+            document.getElementById('guess-result').innerHTML = `🎉 Correct in ${guessTries} tries! Number reset.`;
+            resetGuess();
+        } else if (val > guessNumber) {
+            document.getElementById('guess-result').innerHTML = "Too high!";
+        } else if (val < guessNumber) {
+            document.getElementById('guess-result').innerHTML = "Too low!";
+        } else {
+            document.getElementById('guess-result').innerHTML = "Enter a number 1-20.";
+        }
+    }
+    function resetGuess() {
+        guessNumber = Math.floor(Math.random() * 20) + 1;
+        guessTries = 0;
+        document.getElementById('guess-input').value = '';
+        document.getElementById('guess-result').innerHTML = '';
+    }
+
+    // 3. Memory Flip (emoji, 4 pairs, bigger, fun)
+    let memoryValues = [], memoryTiles = [], memoryFlipped = 0, memoryArr = [];
+    function initMemory() {
+        memoryArr = ['🐶','🐶','🐱','🐱','🦊','🦊','🐸','🐸'].sort(() => 0.5 - Math.random());
+        const board = document.getElementById('memory-game');
+        board.innerHTML = '';
+        memoryValues = [];
+        memoryTiles = [];
+        memoryFlipped = 0;
+        for (let i = 0; i < 8; i++) {
+            const btn = document.createElement('button');
+            btn.className = 'btn btn-outline-primary btn-lg mb-2';
+            btn.style.width = '50px'; btn.style.height = '50px'; btn.style.fontSize = '1.5rem';
+            btn.textContent = '❓';
+            btn.onclick = (function(i) { return function() { memoryFlipTile(this, memoryArr[i]); }; })(i);
+            board.appendChild(btn);
+        }
+        document.getElementById('memory-result').textContent = '';
+    }
+    function memoryFlipTile(tile, val) {
+        if (tile.textContent === '❓' && memoryValues.length < 2) {
+            tile.textContent = val;
+            memoryValues.push(val);
+            memoryTiles.push(tile);
+            if (memoryValues.length === 2) {
+                if (memoryValues[0] === memoryValues[1]) {
+                    memoryFlipped += 2;
+                    memoryValues = [];
+                    memoryTiles = [];
+                    if (memoryFlipped === 8) document.getElementById('memory-result').textContent = "🎉 All matched!";
+                } else {
+                    setTimeout(() => {
+                        memoryTiles[0].textContent = '❓';
+                        memoryTiles[1].textContent = '❓';
+                        memoryValues = [];
+                        memoryTiles = [];
+                    }, 800);
+                }
+            }
+        }
+    }
+    window.initMemory = initMemory;
+    setTimeout(initMemory, 500);
+
+    // 4. Tic Tac Toe (emoji, bigger)
+    let tttBoard = Array(9).fill('');
+    let tttTurn = 'X';
+    let tttOver = false;
+    function drawTTT() {
+        const board = document.getElementById('ttt-board');
+        board.innerHTML = '';
+        const emoji = {X:'❌', O:'⭕'};
+        for (let i = 0; i < 9; i++) {
+            const btn = document.createElement('button');
+            btn.className = 'btn btn-outline-primary btn-lg m-1';
+            btn.style.width = '50px'; btn.style.height = '50px'; btn.style.fontSize = '1.5rem';
+            btn.textContent = tttBoard[i] ? emoji[tttBoard[i]] : '';
+            btn.disabled = tttBoard[i] !== '' || tttOver;
+            btn.onclick = function() { tttMove(i); };
+            board.appendChild(btn);
+        }
+        document.getElementById('ttt-result').textContent = tttOver ? (tttWinner() ? `Winner: ${tttWinner()}` : "Draw!") : `Turn: ${emoji[tttTurn]}`;
+    }
+    function tttMove(i) {
+        if (!tttBoard[i] && !tttOver) {
+            tttBoard[i] = tttTurn;
+            tttTurn = tttTurn === 'X' ? 'O' : 'X';
+            tttOver = !!tttWinner() || tttBoard.every(x => x);
+            drawTTT();
+        }
+    }
+    function tttWinner() {
+        const w = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+        for (let a of w) if (tttBoard[a[0]] && tttBoard[a[0]] === tttBoard[a[1]] && tttBoard[a[1]] === tttBoard[a[2]]) return tttBoard[a[0]] === 'X' ? '❌' : '⭕';
+        return null;
+    }
+    function resetTTT() {
+        tttBoard = Array(9).fill('');
+        tttTurn = 'X';
+        tttOver = false;
+        drawTTT();
+    }
+    window.resetTTT = resetTTT;
+    setTimeout(drawTTT, 500);
+
+    // 5. Whack-a-Mole (bigger, emoji, timer bar)
+    let wamScore = 0, wamActive = -1, wamTimer = null, wamTime = 0;
+    function drawWAM() {
+        const board = document.getElementById('wam-board');
+        board.innerHTML = '';
+        for (let i = 0; i < 9; i++) {
+            const btn = document.createElement('button');
+            btn.className = 'btn btn-outline-primary btn-lg m-1';
+            btn.style.width = '45px'; btn.style.height = '45px'; btn.style.fontSize = '1.5rem';
+            btn.textContent = wamActive === i ? '🐹' : '';
+            btn.onclick = function() { if (wamActive === i) { wamScore++; wamActive = -1; drawWAM(); } };
+            btn.disabled = wamTimer === null;
+            board.appendChild(btn);
+        }
+        document.getElementById('wam-score').textContent = wamTimer ? `Score: ${wamScore}` : '';
+        document.getElementById('wam-timerbar').style.width = (wamTime/15*100) + '%';
+    }
+    function startWAM() {
+        wamScore = 0; wamTime = 0; wamActive = -1;
+        drawWAM();
+        wamTimer = setInterval(() => {
+            wamActive = Math.floor(Math.random() * 9);
+            drawWAM();
+            wamTime++;
+            document.getElementById('wam-timerbar').style.width = (wamTime/15*100) + '%';
+            if (wamTime > 15) {
+                clearInterval(wamTimer);
+                wamTimer = null;
+                wamActive = -1;
+                drawWAM();
+                document.getElementById('wam-score').textContent = `Game over! Final score: ${wamScore}`;
+                document.getElementById('wam-timerbar').style.width = '0%';
+            }
+        }, 800);
+    }
+    window.startWAM = startWAM;
+    setTimeout(drawWAM, 500);
     </script>
+    <style>
+    /* Visually hidden but focusable for skip link */
+    .visually-hidden-focusable {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .visually-hidden-focusable:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      left: auto;
+      background: #4f8cff;
+      color: #fff;
+      outline: 2px solid #fff;
+      border-radius: 4px;
+    }
+    </style>
 </body>
 </html>

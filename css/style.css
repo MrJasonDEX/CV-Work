@@ -18,6 +18,21 @@ h1, h2, h3, h4, h5, h6 {
 /* Navbar */
 .navbar {
     transition: background-color 0.3s ease;
+    background-color: #0a0d1a !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+.navbar-toggler:focus {
+    outline: 2px solid #4f8cff !important;
+    box-shadow: 0 0 0 2px #4f8cff !important;
+}
+.nav-link, .navbar-brand {
+    transition: color 0.2s;
+}
+.nav-link:hover, .nav-link.active, .navbar-brand:hover {
+    color: #82b1ff !important;
+    text-decoration: underline;
 }
 
 .container {
@@ -59,6 +74,9 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(0);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
+    margin-bottom: 2.5rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 2px 24px 0 rgba(79,140,255,0.10), 0 1.5px 8px 0 rgba(0,0,0,0.10);
 }
 
 .card:hover {
@@ -105,6 +123,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsive design */
 @media (max-width: 768px) {
+    .navbar {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
     .container {
         width: 95%;
         padding: 0 10px;
@@ -115,6 +137,14 @@ h1, h2, h3, h4, h5, h6 {
     .py-6 {
         padding-top: 3rem;
         padding-bottom: 3rem;
+    }
+    .section {
+        margin-bottom: 2rem !important;
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+    .card {
+        margin-bottom: 1.5rem;
     }
 }
 

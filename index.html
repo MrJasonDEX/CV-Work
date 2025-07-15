@@ -62,17 +62,19 @@
 <body>
     <!-- Skip to Content Link -->
     <a href="#main-content" class="visually-hidden-focusable bg-primary text-white px-3 py-2 position-absolute" style="z-index:999;top:8px;left:8px;">Skip to main content</a>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent" aria-label="Main navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Main navigation" role="navigation">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand fw-bold" href="#">Jason Gillan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#employment">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tech-skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#compliance">Certifications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -87,7 +89,7 @@
         <div class="hero-bg"></div>
         <div class="container text-center">
             <h1 class="display-3 fw-bold mb-3 animate-in">Hi, I’m Jason!</h1>
-            <p class="lead mb-2">Digital IT | Console Modder | Cybersecurity Enthusiast | Community Builder</p>
+            <p class="lead mb-2">Digital IT | Console Modder | Cybersecurity Enthusiast | Community Builder| Chief</p>
             <p class="tagline mb-4 mx-auto mw-600">Building secure, creative, and inclusive tech experiences that empower communities and individuals.</p>
             <!-- Status Badges -->
             <div class="mb-4 d-flex justify-content-center gap-2 flex-wrap">
@@ -122,7 +124,7 @@
         </section>
 
         <!-- About Me -->
-        <section id="about" class="section py-6" data-aos="fade-up">
+        <section id="about" class="section py-6" data-aos="fade-up" tabindex="-1">
             <div class="container">
                 <div class="row align-items-center g-5">
                     <div class="col-lg-6">
@@ -194,7 +196,7 @@
         </section>
 
         <!-- Employment History Section -->
-        <section id="employment" class="section py-6" data-aos="fade-up">
+        <section id="employment" class="section py-6" data-aos="fade-up" tabindex="-1">
             <div class="container">
                 <h2 class="display-5 text-center mb-5">💼 Employment History</h2>
                 <div class="row g-4">
@@ -223,12 +225,24 @@
         </section>
 
         <!-- Technical Skills Section (expanded) -->
-        <section id="tech-skills" class="section py-6" data-aos="fade-up">
+        <section id="tech-skills" class="section py-6" data-aos="fade-up" tabindex="-1">
             <div class="container">
                 <h2 class="display-5 text-center mb-5">💻 Technical Skills</h2>
                 <ul class="list-group list-group-flush mx-auto" style="max-width: 600px;">
                     <li class="list-group-item bg-transparent border-0"><strong>Languages:</strong> HTML, CSS, PHP, React, Java (hobby)</li>
                     <li class="list-group-item bg-transparent border-0"><strong>Tools:</strong> GitHub Pages, Raspberry Pi, VS Code, Terminal</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Compliance & Certifications Section -->
+        <section id="compliance" class="section py-6 bg-light" data-aos="fade-up" tabindex="-1">
+            <div class="container">
+                <h2 class="display-5 text-center mb-5">🔒 Compliance & Certifications</h2>
+                <ul class="list-group list-group-flush mx-auto" style="max-width: 700px;">
+                    <li class="list-group-item bg-transparent border-0">GDPR Compliant</li>
+                    <li class="list-group-item bg-transparent border-0">Health & Safety</li>
+                    <li class="list-group-item bg-transparent border-0">Food Hygiene</li>
                 </ul>
             </div>
         </section>
@@ -346,44 +360,46 @@
             </div>
         </section>
 
-        <!-- Press & Media Section (improved) -->
+        <!-- Press & Media Section (premium, spaced, interactive) -->
         <section id="press-media" class="section py-6 bg-light" data-aos="fade-up">
-            <div class="container">
+            <div class="container-lg">
                 <h2 class="display-5 text-center mb-5">📰 Press & Media</h2>
-                <div class="row justify-content-center g-4">
+                <div class="row row-cols-1 row-cols-md-2 g-5 justify-content-center">
                     <!-- Article 1 -->
-                    <div class="col-md-6">
-                        <div class="card h-100 shadow-sm border-0">
-                            <div class="card-body">
+                    <div class="col d-flex align-items-stretch">
+                        <div class="card shadow-lg border-0 h-100 press-card position-relative" data-aos="fade-up" data-aos-delay="100" style="transition:transform .2s,box-shadow .2s;">
+                            <span class="badge bg-info position-absolute top-0 end-0 m-3 px-3 py-2 fs-6 shadow">Featured</span>
+                            <div class="card-body d-flex flex-column">
                                 <h5 class="card-title mb-2">
                                     <i class="fas fa-newspaper text-info me-2"></i>
                                     Glasgow Times
                                 </h5>
-                                <p class="card-text mb-3">
+                                <p class="card-text mb-3 fs-5">
                                     <strong>Glasgow man denies City of Glasgow College computer hacks</strong>
                                 </p>
-                                <a href="https://www.glasgowtimes.co.uk/news/19014482.glasgow-man-denies-city-glasgow-college-computer-hacks/" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm">
-                                    <i class="fas fa-external-link-alt me-1"></i> Read Article
+                                
+                                <a href="https://www.glasgowtimes.co.uk/news/19014482.glasgow-man-denies-city-glasgow-college-computer-hacks/" target="_blank" rel="noopener" class="btn btn-link btn-sm text-info mt-2">
+                                    <i class="fas fa-external-link-alt me-1"></i> Read Full Article
                                 </a>
                             </div>
-                            <div class="card-footer bg-transparent border-0 small text-muted"></div>
+                            <div class="card-footer bg-transparent border-0 small text-muted">
                                 Published by Glasgow Times
                             </div>
                         </div>
                     </div>
                     <!-- Article 2 -->
-                    <div class="col-md-6">
-                        <div class="card h-100 shadow-sm border-0">
-                            <div class="card-body">
+                    <div class="col d-flex align-items-stretch">
+                        <div class="card shadow-lg border-0 h-100 press-card" data-aos="fade-up" data-aos-delay="200" style="transition:transform .2s,box-shadow .2s;">
+                            <div class="card-body d-flex flex-column">
                                 <h5 class="card-title mb-2">
                                     <i class="fas fa-user text-success me-2"></i>
                                     Glasgow Live
                                 </h5>
-                                <p class="card-text mb-3">
+                                <p class="card-text mb-3 fs-5">
                                     <strong>Glasgow Lives - Jason, 22, Easterhouse</strong>
                                 </p>
-                                <a href="https://www.glasgowlive.co.uk/news/glasgow-news/glasgow-lives-jason-22-easterhouse-28995640?fbclid=IwY2xjawIb6phleHRuA2FlbQIxMQABHW0FFJgPpH6swp12p7MwGCNrWiK5WKwQuS6A1qLNRZKSTz8_MSrCUTtuNw_aem_sARZqvUIk0AzZW6mDxLQEQ" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm">
-                                    <i class="fas fa-external-link-alt me-1"></i> Read Article
+                                <a href="https://www.glasgowlive.co.uk/news/glasgow-news/glasgow-lives-jason-22-easterhouse-28995640?fbclid=IwY2xjawIb6phleHRuA2FlbQIxMQABHW0FFJgPpH6swp12p7MwGCNrWiK5WKwQuS6A1qLNRZKSTz8_MSrCUTtuNw_aem_sARZqvUIk0AzZW6mDxLQEQ" target="_blank" rel="noopener" class="btn btn-link btn-sm text-info mt-2">
+                                    <i class="fas fa-external-link-alt me-1"></i> Read Full Article
                                 </a>
                             </div>
                             <div class="card-footer bg-transparent border-0 small text-muted">
@@ -392,8 +408,51 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-4">
-                    <span class="text-secondary">Want to feature or interview me? <a href="#contact" class="text-info">Get in touch!</a></span>
+                <div class="text-center mt-5">
+                    <span class="text-secondary fs-5">Want to feature or interview me? <a href="#contact" class="text-info fw-semibold">Get in touch!</a></span>
+                </div>
+            </div>
+
+            <!-- Article 1 Modal -->
+            <div class="modal fade" id="pressModal1" tabindex="-1" aria-labelledby="pressModal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-dark text-light">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="pressModal1Label">
+                                Glasgow Times: Glasgow man denies City of Glasgow College computer hacks
+                            </h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <iframe src="https://www.glasgowtimes.co.uk/news/19014482.glasgow-man-denies-city-glasgow-college-computer-hacks/" style="width:100%;height:60vh;border:0;" title="Glasgow Times Article"></iframe>
+                        </div>
+                        <div class="modal-footer border-0">
+                            <a href="https://www.glasgowtimes.co.uk/news/19014482.glasgow-man-denies-city-glasgow-college-computer-hacks/" target="_blank" rel="noopener" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt me-1"></i> Read on Glasgow Times
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Article 2 Modal -->
+            <div class="modal fade" id="pressModal2" tabindex="-1" aria-labelledby="pressModal2Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-dark text-light">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="pressModal2Label">
+                                Glasgow Live: Glasgow Lives - Jason, 22, Easterhouse
+                            </h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <iframe src="https://www.glasgowlive.co.uk/news/glasgow-news/glasgow-lives-jason-22-easterhouse-28995640?fbclid=IwY2xjawIb6phleHRuA2FlbQIxMQABHW0FFJgPpH6swp12p7MwGCNrWiK5WKwQuS6A1qLNRZKSTz8_MSrCUTtuNw_aem_sARZqvUIk0AzZW6mDxLQEQ" style="width:100%;height:60vh;border:0;" title="Glasgow Live Article"></iframe>
+                        </div>
+                        <div class="modal-footer border-0">
+                            <a href="https://www.glasgowlive.co.uk/news/glasgow-news/glasgow-lives-jason-22-easterhouse-28995640?fbclid=IwY2xjawIb6phleHRuA2FlbQIxMQABHW0FFJgPpH6swp12p7MwGCNrWiK5WKwQuS6A1qLNRZKSTz8_MSrCUTtuNw_aem_sARZqvUIk0AzZW6mDxLQEQ" target="_blank" rel="noopener" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt me-1"></i> Read on Glasgow Live
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -774,6 +833,33 @@
       outline: 2px solid #fff;
       border-radius: 4px;
     }
+    .press-card {
+    border-radius: 1.25rem;
+    box-shadow: 0 2px 24px 0 rgba(79,140,255,0.10), 0 1.5px 8px 0 rgba(0,0,0,0.10);
+    transition: transform .2s, box-shadow .2s;
+    margin-bottom: 2rem;
+}
+.press-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(79,140,255,0.18), 0 2px 12px rgba(0,0,0,0.12);
+    border-color: #4f8cff;
+    z-index: 2;
+}
+.section {
+    margin-bottom: 3.5rem !important;
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+}
+@media (max-width: 768px) {
+    .section {
+        margin-bottom: 2rem !important;
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    .press-card {
+        margin-bottom: 1.5rem;
+    }
+}
     </style>
 </body>
 </html>

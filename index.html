@@ -96,10 +96,12 @@
       <span class="badge bg-primary"><i class="fas fa-user-tie"></i> Full-Time</span>
       <span class="badge bg-info"><i class="fas fa-users"></i> Collaboration</span>
     </div>
+    <!-- PDF GENERATOR BUTTON (in hero section) -->
     <div class="d-flex justify-content-center gap-3 mb-2">
       <a href="#contact" class="btn btn-primary btn-lg">Contact Me</a>
       <a href="assets/JasonGillan-CV.pdf" class="btn btn-outline-light btn-lg" download>Download CV</a>
       <button class="btn btn-outline-primary btn-lg" onclick="window.print()"><i class="fas fa-file-pdf"></i> Save as PDF</button>
+      <button class="btn btn-outline-success btn-lg" id="generatePDF"><i class="fas fa-file-download"></i> Generate Portfolio PDF</button>
     </div>
     <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap">
       <img src="https://github-readme-stats.vercel.app/api?username=MrJasonDex&show_icons=true&theme=default" alt="GitHub Stats" height="32">
@@ -328,6 +330,113 @@ window.addEventListener('DOMContentLoaded', typeWriter);
 </section>
 <!-- END PROJECTS CARDS -->
 
+<!-- BLOG/NEWS SECTION -->
+<section id="blog" class="section py-6 bg-light" data-aos="fade-up">
+  <div class="container">
+    <h2 class="display-5 text-center mb-5">📝 Blog & News</h2>
+    <div class="d-flex justify-content-end mb-3">
+      <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#writePostModal"><i class="fas fa-pen"></i> Write a Post</button>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">How I Built My Portfolio</h5>
+            <div class="text-muted small mb-2">May 2024</div>
+            <p class="card-text">A behind-the-scenes look at the design and tech choices for this site.</p>
+            <button class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#blogModal1">Read More</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Tips for Accessible Web Design</h5>
+            <div class="text-muted small mb-2">April 2024</div>
+            <p class="card-text">Simple ways to make your website more inclusive and user-friendly.</p>
+            <button class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#blogModal2">Read More</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Why I Love Console Modding</h5>
+            <div class="text-muted small mb-2">March 2024</div>
+            <p class="card-text">Exploring the creative and technical side of console modding.</p>
+            <button class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#blogModal3">Read More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- BLOG MODALS -->
+<div class="modal fade" id="blogModal1" tabindex="-1" aria-labelledby="blogModal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="blogModal1Label">How I Built My Portfolio</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>This post will detail the process, tools, and design decisions that went into building my portfolio website. (Full content coming soon!)</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="blogModal2" tabindex="-1" aria-labelledby="blogModal2Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="blogModal2Label">Tips for Accessible Web Design</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Accessibility is key to reaching everyone. Here are some practical tips to make your site more inclusive. (Full content coming soon!)</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="blogModal3" tabindex="-1" aria-labelledby="blogModal3Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="blogModal3Label">Why I Love Console Modding</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Console modding is a blend of creativity and technical skill. In this post, I share why it's such a rewarding hobby. (Full content coming soon!)</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- WRITE POST MODAL (placeholder) -->
+<div class="modal fade" id="writePostModal" tabindex="-1" aria-labelledby="writePostModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="writePostModalLabel">Write a New Post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="postTitle" class="form-label">Title</label>
+            <input type="text" class="form-control" id="postTitle" placeholder="Enter post title">
+          </div>
+          <div class="mb-3">
+            <label for="postContent" class="form-label">Content</label>
+            <textarea class="form-control" id="postContent" rows="6" placeholder="Write your post here..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" disabled>Submit (Coming Soon)</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END BLOG/NEWS SECTION -->
+
 <!-- SKILLS SECTION WITH PROGRESS BARS -->
 <section id="tech-skills" class="section py-6" data-aos="fade-up">
   <div class="container">
@@ -408,126 +517,178 @@ window.addEventListener('DOMContentLoaded', typeWriter);
 </section>
 <!-- END FUN FACTS -->
 
-<!-- Press & Media Section (premium, spaced, interactive) -->
+<!-- PRESS & MEDIA SHOWCASE (MODERN) -->
 <section id="press-media" class="section py-6 bg-light" data-aos="fade-up">
   <div class="container-lg">
     <h2 class="display-5 text-center mb-5">📰 Press & Media</h2>
-    <div class="row row-cols-1 row-cols-md-2 g-5 justify-content-center">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="press-media-grid">
       <!-- Article 1 -->
       <div class="col d-flex align-items-stretch">
-        <div class="card shadow-lg border-0 h-100 press-card position-relative" data-aos="fade-up" data-aos-delay="100" style="transition:transform .2s,box-shadow .2s;">
-          <span class="badge bg-info position-absolute top-0 end-0 m-3 px-3 py-2 fs-6 shadow">Featured</span>
+        <div class="card shadow-lg border-0 h-100 press-card position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://i2-prod.glasgowlive.co.uk/incoming/article28995671.ece/ALTERNATES/s810/0_GL-JASON-ARTIC-6805.jpg" class="card-img-top" alt="Glasgow Times Article" style="object-fit:cover;height:180px;">
+          <span class="badge bg-info position-absolute top-0 end-0 m-3 px-3 py-2 fs-6 shadow animate__animated animate__pulse animate__infinite">Featured</span>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title mb-2">
-              <i class="fas fa-newspaper text-info me-2"></i>
-              Glasgow Times
-            </h5>
-            <p class="card-text mb-3 fs-5">
-              <strong>Glasgow man denies City of Glasgow College computer hacks</strong>
-            </p>
-            <a href="https://www.glasgowtimes.co.uk/news/19014482.glasgow-man-denies-city-glasgow-college-computer-hacks/" target="_blank" rel="noopener" class="btn btn-link btn-sm text-info mt-2">
-              <i class="fas fa-external-link-alt me-1"></i> Read Full Article
-            </a>
+            <div class="d-flex align-items-center mb-2">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Glasgow_Times_logo.png" alt="Glasgow Times Logo" style="height:32px;width:auto;" class="me-2">
+              <span class="fw-bold">Glasgow Times</span>
+            </div>
+            <h5 class="card-title mb-2">Glasgow man denies City of Glasgow College computer hacks</h5>
+            <p class="card-text mb-3 fs-6">A feature on Jason's digital journey and legal challenges, published in the Glasgow Times.</p>
+            <button class="btn btn-outline-info btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#pressModal1">Read More</button>
           </div>
           <div class="card-footer bg-transparent border-0 small text-muted">
-            Published by Glasgow Times
+            <i class="fas fa-calendar-alt me-1"></i> Jan 2021
           </div>
         </div>
       </div>
       <!-- Article 2 -->
       <div class="col d-flex align-items-stretch">
-        <div class="card shadow-lg border-0 h-100 press-card" data-aos="fade-up" data-aos-delay="200" style="transition:transform .2s,box-shadow .2s;">
+        <div class="card shadow-lg border-0 h-100 press-card position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://i2-prod.glasgowlive.co.uk/incoming/article28995671.ece/ALTERNATES/s810/0_GL-JASON-ARTIC-6805.jpg" class="card-img-top" alt="Glasgow Live Article" style="object-fit:cover;height:180px;">
+          <span class="badge bg-success position-absolute top-0 end-0 m-3 px-3 py-2 fs-6 shadow animate__animated animate__pulse animate__infinite">In the News</span>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title mb-2">
-              <i class="fas fa-user text-success me-2"></i>
-              Glasgow Live
-            </h5>
-            <p class="card-text mb-3 fs-5">
-              <strong>Glasgow Lives - Jason, 22, Easterhouse</strong>
-            </p>
-            <a href="https://www.glasgowlive.co.uk/news/glasgow-news/glasgow-lives-jason-22-easterhouse-28995640?fbclid=IwY2xjawIb6phleHRuA2FlbQIxMQABHW0FFJgPpH6swp12p7MwGCNrWiK5WKwQuS6A1qLNRZKSTz8_MSrCUTtuNw_aem_sARZqvUIk0AzZW6mDxLQEQ" target="_blank" rel="noopener" class="btn btn-link btn-sm text-info mt-2">
-              <i class="fas fa-external-link-alt me-1"></i> Read Full Article
-            </a>
+            <div class="d-flex align-items-center mb-2">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Glasgow_Live_logo.png" alt="Glasgow Live Logo" style="height:32px;width:auto;" class="me-2">
+              <span class="fw-bold">Glasgow Live</span>
+            </div>
+            <h5 class="card-title mb-2">Glasgow Lives - Jason, 22, Easterhouse</h5>
+            <p class="card-text mb-3 fs-6">A personal profile of Jason's life and work, published by Glasgow Live.</p>
+            <button class="btn btn-outline-success btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#pressModal2">Read More</button>
           </div>
           <div class="card-footer bg-transparent border-0 small text-muted">
-            Published by Glasgow Live
+            <i class="fas fa-calendar-alt me-1"></i> Feb 2021
           </div>
         </div>
       </div>
+      <!-- Add more articles here as needed -->
     </div>
     <div class="text-center mt-5">
       <span class="text-secondary fs-5">Want to feature or interview me? <a href="#contact" class="text-info fw-semibold">Get in touch!</a></span>
     </div>
   </div>
 </section>
-<!-- END PRESS & MEDIA -->
+<!-- Article 1 Modal -->
+<div class="modal fade" id="pressModal1" tabindex="-1" aria-labelledby="pressModal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="pressModal1Label">Glasgow Times: Glasgow man denies City of Glasgow College computer hacks</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://www.glasgowtimes.co.uk/news/19014482.glasgow-man-denies-city-glasgow-college-computer-hacks/" style="width:100%;height:60vh;border:0;" title="Glasgow Times Article"></iframe>
+      </div>
+      <div class="modal-footer border-0">
+        <a href="https://www.glasgowtimes.co.uk/news/19014482.glasgow-man-denies-city-glasgow-college-computer-hacks/" target="_blank" rel="noopener" class="btn btn-info">
+          <i class="fas fa-external-link-alt me-1"></i> Read on Glasgow Times
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Article 2 Modal -->
+<div class="modal fade" id="pressModal2" tabindex="-1" aria-labelledby="pressModal2Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="pressModal2Label">Glasgow Live: Glasgow Lives - Jason, 22, Easterhouse</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://www.glasgowlive.co.uk/news/glasgow-news/glasgow-lives-jason-22-easterhouse-28995640?fbclid=IwY2xjawIb6phleHRuA2FlbQIxMQABHW0FFJgPpH6swp12p7MwGCNrWiK5WKwQuS6A1qLNRZKSTz8_MSrCUTtuNw_aem_sARZqvUIk0AzZW6mDxLQEQ" style="width:100%;height:60vh;border:0;" title="Glasgow Live Article"></iframe>
+      </div>
+      <div class="modal-footer border-0">
+        <a href="https://www.glasgowlive.co.uk/news/glasgow-news/glasgow-lives-jason-22-easterhouse-28995640?fbclid=IwY2xjawIb6phleHRuA2FlbQIxMQABHW0FFJgPpH6swp12p7MwGCNrWiK5WKwQuS6A1qLNRZKSTz8_MSrCUTtuNw_aem_sARZqvUIk0AzZW6mDxLQEQ" target="_blank" rel="noopener" class="btn btn-success">
+          <i class="fas fa-external-link-alt me-1"></i> Read on Glasgow Live
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END PRESS & MEDIA SHOWCASE -->
 
-<!-- Mini Games Section (improved) -->
-<section id="mini-games" class="section py-6" data-aos="fade-up">
+<!-- GAME ARCADE SECTION (MODERN MINI GAMES) -->
+<section id="game-arcade" class="section py-6 bg-light" data-aos="fade-up">
   <div class="container">
-    <h2 class="display-5 text-center mb-5">🎮 Mini Games (JavaScript Demos)</h2>
-    <div class="row g-4">
-      <!-- Rock Paper Scissors (with emoji, larger buttons, score) -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 p-3 text-center">
-          <h4 class="mb-3">Rock Paper Scissors</h4>
-          <div id="rps-game">
-            <div class="mb-2">
-              <button class="btn btn-primary btn-lg mx-1" onclick="playRPS('rock')">✊</button>
-              <button class="btn btn-primary btn-lg mx-1" onclick="playRPS('paper')">✋</button>
-              <button class="btn btn-primary btn-lg mx-1" onclick="playRPS('scissors')">✌️</button>
-            </div>
-            <div id="rps-result" class="mt-2 fw-bold"></div>
-            <div id="rps-score" class="mt-1 small"></div>
+    <h2 class="display-5 text-center mb-5">🎮 Game Arcade</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <!-- Rock Paper Scissors -->
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0 text-center game-card">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <i class="fas fa-hand-rock fa-2x mb-3 text-primary"></i>
+            <h5 class="card-title">Rock Paper Scissors</h5>
+            <p class="card-text">Classic game with emoji and score tracking.</p>
+            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalRPS">Play</button>
           </div>
         </div>
       </div>
-      <!-- Number Guess (with range, feedback, and reset) -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 p-3 text-center">
-          <h4 class="mb-3">Number Guess</h4>
-          <div id="guess-game">
-            <input type="number" id="guess-input" class="form-control form-control-lg mb-2 text-center" placeholder="1-20" min="1" max="20" style="width:100px;display:inline-block;">
-            <button class="btn btn-primary btn-lg" onclick="checkGuess()">Guess</button>
-            <div id="guess-result" class="mt-2 fw-bold"></div>
-            <button class="btn btn-outline-primary btn-sm mt-2" onclick="resetGuess()">Restart</button>
+      <!-- Simon Says -->
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0 text-center game-card">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <i class="fas fa-bullseye fa-2x mb-3 text-success"></i>
+            <h5 class="card-title">Simon Says</h5>
+            <p class="card-text">Repeat the color sequence. How far can you go?</p>
+            <button class="btn btn-success mt-auto" data-bs-toggle="modal" data-bs-target="#modalSimon">Play</button>
           </div>
         </div>
       </div>
-      <!-- Memory Flip (larger, emoji, fun colors) -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 p-3 text-center">
-          <h4 class="mb-3">Memory Flip</h4>
-          <div id="memory-game" class="d-flex flex-wrap gap-2 justify-content-center" style="max-width:220px;"></div>
-          <div id="memory-result" class="mt-2 fw-bold"></div>
-          <button class="btn btn-outline-primary btn-sm mt-2" onclick="initMemory()">Restart</button>
-        </div>
-      </div>
-      <!-- Tic Tac Toe (bigger, emoji, fun colors) -->
-      <div class="col-md-6 col-lg-6">
-        <div class="card h-100 p-3 text-center">
-          <h4 class="mb-3">Tic Tac Toe</h4>
-          <div id="ttt-board" class="d-flex flex-wrap justify-content-center" style="width:180px;"></div>
-          <div id="ttt-result" class="mt-2 fw-bold"></div>
-          <button class="btn btn-outline-primary btn-sm mt-2" onclick="resetTTT()">Restart</button>
-        </div>
-      </div>
-      <!-- Whack-a-Mole (bigger, fun, emoji, timer bar) -->
-      <div class="col-md-6 col-lg-6">
-        <div class="card h-100 p-3 text-center">
-          <h4 class="mb-3">Whack-a-Mole</h4>
-          <div id="wam-board" class="d-flex flex-wrap justify-content-center" style="width:180px;"></div>
-          <div id="wam-score" class="mt-2 fw-bold"></div>
-          <div class="progress my-2" style="height: 10px;">
-            <div id="wam-timerbar" class="progress-bar bg-info" style="width:0%"></div>
+      <!-- Snake -->
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0 text-center game-card">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <i class="fas fa-apple-alt fa-2x mb-3 text-danger"></i>
+            <h5 class="card-title">Snake</h5>
+            <p class="card-text">Eat apples, grow your snake, avoid the walls!</p>
+            <button class="btn btn-danger mt-auto" data-bs-toggle="modal" data-bs-target="#modalSnake">Play</button>
           </div>
-          <button class="btn btn-outline-primary btn-sm mt-2" onclick="startWAM()">Start</button>
+        </div>
+      </div>
+      <!-- Wordle -->
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0 text-center game-card">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <i class="fas fa-font fa-2x mb-3 text-warning"></i>
+            <h5 class="card-title">Wordle</h5>
+            <p class="card-text">Guess the 5-letter word in 6 tries.</p>
+            <button class="btn btn-warning mt-auto" data-bs-toggle="modal" data-bs-target="#modalWordle">Play</button>
+          </div>
+        </div>
+      </div>
+      <!-- 2048 -->
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0 text-center game-card">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <i class="fas fa-th-large fa-2x mb-3 text-info"></i>
+            <h5 class="card-title">2048</h5>
+            <p class="card-text">Slide tiles to reach 2048!</p>
+            <button class="btn btn-info mt-auto" data-bs-toggle="modal" data-bs-target="#modal2048">Play</button>
+          </div>
+        </div>
+      </div>
+      <!-- Minesweeper -->
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0 text-center game-card">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <i class="fas fa-bomb fa-2x mb-3 text-secondary"></i>
+            <h5 class="card-title">Minesweeper</h5>
+            <p class="card-text">Find all the mines without blowing up!</p>
+            <button class="btn btn-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#modalMinesweeper">Play</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- END MINI GAMES -->
+<!-- GAME MODALS (placeholders for now, JS to be added) -->
+<div class="modal fade" id="modalRPS" tabindex="-1" aria-labelledby="modalRPSLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalRPSLabel">Rock Paper Scissors</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="rps-modal-game"></div></div></div></div></div>
+<div class="modal fade" id="modalSimon" tabindex="-1" aria-labelledby="modalSimonLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalSimonLabel">Simon Says</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="simon-modal-game"></div></div></div></div></div>
+<div class="modal fade" id="modalSnake" tabindex="-1" aria-labelledby="modalSnakeLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalSnakeLabel">Snake</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><canvas id="snake-canvas" width="300" height="300" style="background:#222;display:block;margin:auto;"></canvas><div id="snake-score" class="mt-2 text-center"></div></div></div></div></div>
+<div class="modal fade" id="modalWordle" tabindex="-1" aria-labelledby="modalWordleLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalWordleLabel">Wordle</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="wordle-modal-game"></div></div></div></div></div>
+<div class="modal fade" id="modal2048" tabindex="-1" aria-labelledby="modal2048Label" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modal2048Label">2048</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="game2048-modal-game"></div></div></div></div></div>
+<div class="modal fade" id="modalMinesweeper" tabindex="-1" aria-labelledby="modalMinesweeperLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalMinesweeperLabel">Minesweeper</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="minesweeper-modal-game"></div></div></div></div></div>
+<!-- END GAME ARCADE -->
 
     </main>
 

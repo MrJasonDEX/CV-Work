@@ -623,14 +623,58 @@ window.addEventListener('DOMContentLoaded', typeWriter);
           </div>
         </div>
       </div>
+      <!-- Number Guess -->
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0 text-center game-card">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <i class="fas fa-hashtag fa-2x mb-3 text-info"></i>
+            <h5 class="card-title">Number Guess</h5>
+            <p class="card-text">Guess the number between 1 and 20.</p>
+            <button class="btn btn-info mt-auto" data-bs-toggle="modal" data-bs-target="#modalGuess">Play</button>
+          </div>
+        </div>
+      </div>
+      <!-- Memory Flip -->
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0 text-center game-card">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <i class="fas fa-brain fa-2x mb-3 text-warning"></i>
+            <h5 class="card-title">Memory Flip</h5>
+            <p class="card-text">Match all the pairs to win!</p>
+            <button class="btn btn-warning mt-auto" data-bs-toggle="modal" data-bs-target="#modalMemory">Play</button>
+          </div>
+        </div>
+      </div>
+      <!-- Tic Tac Toe -->
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0 text-center game-card">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <i class="fas fa-times-circle fa-2x mb-3 text-danger"></i>
+            <h5 class="card-title">Tic Tac Toe</h5>
+            <p class="card-text">Classic Xs and Os game.</p>
+            <button class="btn btn-danger mt-auto" data-bs-toggle="modal" data-bs-target="#modalTTT">Play</button>
+          </div>
+        </div>
+      </div>
+      <!-- Whack-a-Mole -->
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0 text-center game-card">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <i class="fas fa-hammer fa-2x mb-3 text-success"></i>
+            <h5 class="card-title">Whack-a-Mole</h5>
+            <p class="card-text">Hit as many moles as you can!</p>
+            <button class="btn btn-success mt-auto" data-bs-toggle="modal" data-bs-target="#modalWAM">Play</button>
+          </div>
+        </div>
+      </div>
       <!-- Simon Says -->
       <div class="col">
         <div class="card h-100 shadow-lg border-0 text-center game-card">
           <div class="card-body d-flex flex-column align-items-center justify-content-center">
-            <i class="fas fa-bullseye fa-2x mb-3 text-success"></i>
+            <i class="fas fa-bullseye fa-2x mb-3 text-primary"></i>
             <h5 class="card-title">Simon Says</h5>
             <p class="card-text">Repeat the color sequence. How far can you go?</p>
-            <button class="btn btn-success mt-auto" data-bs-toggle="modal" data-bs-target="#modalSimon">Play</button>
+            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalSimon">Play</button>
           </div>
         </div>
       </div>
@@ -638,10 +682,10 @@ window.addEventListener('DOMContentLoaded', typeWriter);
       <div class="col">
         <div class="card h-100 shadow-lg border-0 text-center game-card">
           <div class="card-body d-flex flex-column align-items-center justify-content-center">
-            <i class="fas fa-apple-alt fa-2x mb-3 text-danger"></i>
+            <i class="fas fa-apple-alt fa-2x mb-3 text-success"></i>
             <h5 class="card-title">Snake</h5>
             <p class="card-text">Eat apples, grow your snake, avoid the walls!</p>
-            <button class="btn btn-danger mt-auto" data-bs-toggle="modal" data-bs-target="#modalSnake">Play</button>
+            <button class="btn btn-success mt-auto" data-bs-toggle="modal" data-bs-target="#modalSnake">Play</button>
           </div>
         </div>
       </div>
@@ -681,14 +725,18 @@ window.addEventListener('DOMContentLoaded', typeWriter);
     </div>
   </div>
 </section>
-<!-- GAME MODALS (placeholders for now, JS to be added) -->
+<!-- GAME MODALS -->
 <div class="modal fade" id="modalRPS" tabindex="-1" aria-labelledby="modalRPSLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalRPSLabel">Rock Paper Scissors</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="rps-modal-game"></div></div></div></div></div>
+<div class="modal fade" id="modalGuess" tabindex="-1" aria-labelledby="modalGuessLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalGuessLabel">Number Guess</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="guess-modal-game"></div></div></div></div></div>
+<div class="modal fade" id="modalMemory" tabindex="-1" aria-labelledby="modalMemoryLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalMemoryLabel">Memory Flip</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="memory-modal-game"></div></div></div></div></div>
+<div class="modal fade" id="modalTTT" tabindex="-1" aria-labelledby="modalTTTLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalTTTLabel">Tic Tac Toe</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="ttt-modal-game"></div></div></div></div></div>
+<div class="modal fade" id="modalWAM" tabindex="-1" aria-labelledby="modalWAMLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalWAMLabel">Whack-a-Mole</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="wam-modal-game"></div></div></div></div></div>
 <div class="modal fade" id="modalSimon" tabindex="-1" aria-labelledby="modalSimonLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalSimonLabel">Simon Says</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="simon-modal-game"></div></div></div></div></div>
-<div class="modal fade" id="modalSnake" tabindex="-1" aria-labelledby="modalSnakeLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalSnakeLabel">Snake</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><canvas id="snake-canvas" width="300" height="300" style="background:#222;display:block;margin:auto;"></canvas><div id="snake-score" class="mt-2 text-center"></div></div></div></div></div>
+<div class="modal fade" id="modalSnake" tabindex="-1" aria-labelledby="modalSnakeLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalSnakeLabel">Snake</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="snake-modal-game"></div></div></div></div></div>
 <div class="modal fade" id="modalWordle" tabindex="-1" aria-labelledby="modalWordleLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalWordleLabel">Wordle</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="wordle-modal-game"></div></div></div></div></div>
 <div class="modal fade" id="modal2048" tabindex="-1" aria-labelledby="modal2048Label" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modal2048Label">2048</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="game2048-modal-game"></div></div></div></div></div>
 <div class="modal fade" id="modalMinesweeper" tabindex="-1" aria-labelledby="modalMinesweeperLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalMinesweeperLabel">Minesweeper</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div id="minesweeper-modal-game"></div></div></div></div></div>
-<!-- END GAME ARCADE -->
+<!-- END GAME MODALS -->
 
     </main>
 

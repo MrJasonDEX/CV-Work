@@ -85,30 +85,66 @@
         </div>
     </nav>
 
-    <header class="hero vh-100 d-flex align-items-center position-relative overflow-hidden" id="hero">
-        <div class="hero-bg"></div>
-        <div class="container text-center">
-            <h1 class="display-3 fw-bold mb-3 animate-in">Hi, I’m Jason!</h1>
-            <p class="lead mb-2">Digital IT | Console Modder | Cybersecurity Enthusiast | Community Builder| Chief</p>
-            <p class="tagline mb-4 mx-auto mw-600">Building secure, creative, and inclusive tech experiences that empower communities and individuals.</p>
-            <!-- Status Badges -->
-            <div class="mb-4 d-flex justify-content-center gap-2 flex-wrap">
-                <span class="badge bg-success"><i class="fas fa-briefcase"></i> Open to Freelance</span>
-                <span class="badge bg-primary"><i class="fas fa-user-tie"></i> Full-Time</span>
-                <span class="badge bg-info"><i class="fas fa-users"></i> Collaboration</span>
-            </div>
-            <div class="d-flex justify-content-center gap-3 mb-2">
-                <a href="#contact" class="btn btn-primary btn-lg">Contact Me</a>
-                <a href="assets/JasonGillan-CV.pdf" class="btn btn-outline-light btn-lg" download>Download CV</a>
-                <button class="btn btn-outline-primary btn-lg" onclick="window.print()"><i class="fas fa-file-pdf"></i> Save as PDF</button>
-            </div>
-            <!-- GitHub Stats Badges -->
-            <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap">
-                <img src="https://github-readme-stats.vercel.app/api?username=MrJasonDex&show_icons=true&theme=default" alt="GitHub Stats" height="32">
-                <img src="https://github-readme-streak-stats.herokuapp.com/?user=MrJasonDex&theme=default" alt="GitHub Streak" height="32">
-            </div>
-        </div>
-    </header>
+    <!-- MAJOR UPGRADE: HERO SECTION WITH TYPEWRITER EFFECT -->
+<header class="hero vh-100 d-flex align-items-center justify-content-center position-relative overflow-hidden bg-gradient" id="hero">
+  <div class="container text-center">
+    <h1 class="display-3 fw-bold mb-3 animate-in" id="typewriter"></h1>
+    <p class="lead mb-2">Digital IT | Console Modder | Cybersecurity Enthusiast | Community Builder | Chief</p>
+    <p class="tagline mb-4 mx-auto mw-600">Building secure, creative, and inclusive tech experiences that empower communities and individuals.</p>
+    <div class="mb-4 d-flex justify-content-center gap-2 flex-wrap">
+      <span class="badge bg-success"><i class="fas fa-briefcase"></i> Open to Freelance</span>
+      <span class="badge bg-primary"><i class="fas fa-user-tie"></i> Full-Time</span>
+      <span class="badge bg-info"><i class="fas fa-users"></i> Collaboration</span>
+    </div>
+    <div class="d-flex justify-content-center gap-3 mb-2">
+      <a href="#contact" class="btn btn-primary btn-lg">Contact Me</a>
+      <a href="assets/JasonGillan-CV.pdf" class="btn btn-outline-light btn-lg" download>Download CV</a>
+      <button class="btn btn-outline-primary btn-lg" onclick="window.print()"><i class="fas fa-file-pdf"></i> Save as PDF</button>
+    </div>
+    <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap">
+      <img src="https://github-readme-stats.vercel.app/api?username=MrJasonDex&show_icons=true&theme=default" alt="GitHub Stats" height="32">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=MrJasonDex&theme=default" alt="GitHub Streak" height="32">
+    </div>
+  </div>
+</header>
+<!-- END HERO UPGRADE -->
+
+<!-- TYPEWRITER JS (insert before </body>) -->
+<script>
+// Typewriter effect for headline
+const typewriterTexts = [
+  "Hi, I’m Jason!",
+  "Digital IT Professional.",
+  "Console Modder.",
+  "Cybersecurity Enthusiast.",
+  "Community Builder."
+];
+let twIndex = 0, twChar = 0, twDeleting = false;
+function typeWriter() {
+  const el = document.getElementById('typewriter');
+  if (!el) return;
+  const current = typewriterTexts[twIndex];
+  if (!twDeleting) {
+    el.textContent = current.substring(0, twChar + 1);
+    twChar++;
+    if (twChar === current.length) {
+      twDeleting = true;
+      setTimeout(typeWriter, 1200);
+      return;
+    }
+  } else {
+    el.textContent = current.substring(0, twChar - 1);
+    twChar--;
+    if (twChar === 0) {
+      twDeleting = false;
+      twIndex = (twIndex + 1) % typewriterTexts.length;
+    }
+  }
+  setTimeout(typeWriter, twDeleting ? 40 : 90);
+}
+window.addEventListener('DOMContentLoaded', typeWriter);
+</script>
+<!-- END TYPEWRITER -->
 
     <main role="main" id="main-content">
         <!-- Personal Info Section -->
@@ -228,18 +264,113 @@
             </div>
         </section>
 
-        <!-- Technical Skills Section (expanded) -->
-        <section id="tech-skills" class="section py-6" data-aos="fade-up" tabindex="-1">
-            <div class="container">
-                <h2 class="display-5 text-center mb-5">💻 Technical Skills</h2>
-                <ul class="list-group list-group-flush mx-auto" style="max-width: 600px;">
-                    <li class="list-group-item bg-transparent border-0"><strong>Languages:</strong> HTML, CSS, PHP, React, Java (hobby)</li>
-                    <li class="list-group-item bg-transparent border-0"><strong>Tools:</strong> GitHub Pages, Raspberry Pi, VS Code, Terminal</li>
-                </ul>
-            </div>
-        </section>
+        <!-- IMPROVED PROJECTS SECTION WITH CARDS -->
+<section id="projects-expanded" class="section py-6 bg-light" data-aos="fade-up">
+  <div class="container">
+    <h2 class="display-5 text-center mb-5">🛠️ Projects</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0">
+          <div class="card-body">
+            <h5 class="card-title text-info">PSN Friend Management Tool</h5>
+            <p class="card-text">Unfriends all PSN friends except those in a .txt list. GUI-based, cookie login, logging, backups, alerts.</p>
+            <span class="badge bg-warning">In Progress</span>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0">
+          <div class="card-body">
+            <h5 class="card-title text-info">Raspberry Pi AI Chatbot</h5>
+            <p class="card-text">Conversational AI running on Raspberry Pi for home automation and fun.</p>
+            <span class="badge bg-warning">In Progress</span>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0">
+          <div class="card-body">
+            <h5 class="card-title text-success">Garage Automation Prototype</h5>
+            <p class="card-text">Web-based prototype for smart garage automation and booking.</p>
+            <span class="badge bg-success">Achieved</span>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Portfolio Website</h5>
+            <p class="card-text">This site! Built with HTML, CSS, Bootstrap, and JavaScript. Modern, accessible, and responsive.</p>
+            <span class="badge bg-primary">Building</span>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0">
+          <div class="card-body">
+            <h5 class="card-title text-secondary">Digital Workshop Platform</h5>
+            <p class="card-text">Interactive platform for digital workshops and community learning.</p>
+            <span class="badge bg-secondary">Pending</span>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 shadow-lg border-0">
+          <div class="card-body">
+            <h5 class="card-title text-secondary">Cloud Storage App</h5>
+            <p class="card-text">Personal cloud storage solution for secure file access anywhere.</p>
+            <span class="badge bg-secondary">Pending</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END PROJECTS CARDS -->
 
-        <!-- Compliance & Certifications Section -->
+<!-- SKILLS SECTION WITH PROGRESS BARS -->
+<section id="tech-skills" class="section py-6" data-aos="fade-up">
+  <div class="container">
+    <h2 class="display-5 text-center mb-5">💻 Technical Skills</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label class="fw-bold">HTML & CSS</label>
+          <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 95%;">95%</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="fw-bold">JavaScript</label>
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 85%;">85%</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="fw-bold">PHP</label>
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;">70%</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="fw-bold">React</label>
+          <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 60%;">60%</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="fw-bold">Python</label>
+          <div class="progress">
+            <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%;">80%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END SKILLS -->
+
+<!-- Compliance & Certifications Section -->
         <section id="compliance" class="section py-6 bg-light" data-aos="fade-up" tabindex="-1">
             <div class="container">
                 <h2 class="display-5 text-center mb-5">🔒 Compliance & Certifications</h2>
@@ -251,240 +382,152 @@
             </div>
         </section>
 
-        <!-- Projects Section (split by status) -->
-        <section id="projects-expanded" class="section py-6 bg-light" data-aos="fade-up">
-            <div class="container">
-                <h2 class="display-5 text-center mb-5">🛠️ Projects</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h4 class="mb-3 text-info">In Progress</h4>
-                        <ul class="list-group list-group-flush mb-4">
-                            <li class="list-group-item bg-transparent border-0">
-                                <strong>PSN Friend Management Tool:</strong> Unfriends all PSN friends except those in a .txt list. GUI-based, cookie login, logging, backups, alerts.
-                            </li>
-                            <li class="list-group-item bg-transparent border-0">
-                                <strong>Raspberry Pi AI Chatbot</strong>
-                            </li>
-                        </ul>
-                        <h4 class="mb-3 text-warning">Pending</h4>
-                        <ul class="list-group list-group-flush mb-4">
-                            <li class="list-group-item bg-transparent border-0"><strong>Digital Workshop Platform</strong></li>
-                            <li class="list-group-item bg-transparent border-0"><strong>Cloud Storage App</strong></li>
-                            <li class="list-group-item bg-transparent border-0"><strong>Dotted Ballon’s:</strong> Personalised balloon e-commerce site with animations</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <h4 class="mb-3 text-success">Achieved</h4>
-                        <ul class="list-group list-group-flush mb-4">
-                            <li class="list-group-item bg-transparent border-0"><strong>Garage automation prototype site</strong></li>
-                        </ul>
-                        <h4 class="mb-3 text-primary">Building</h4>
-                        <ul class="list-group list-group-flush mb-4">
-                            <li class="list-group-item bg-transparent border-0"><strong>Portfolio website</strong> (includes About, Projects, Skills)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- IMPROVED FUN FACTS/QUICK STATS WITH ANIMATED COUNTERS -->
+<section id="fun-facts" class="section py-6 bg-light" data-aos="fade-up">
+  <div class="container text-center">
+    <h2 class="display-5 mb-5">🚀 Quick Stats</h2>
+    <div class="row justify-content-center g-4">
+      <div class="col-6 col-md-3">
+        <div class="fs-1 fw-bold text-info" id="stat-years">0</div>
+        <div class="fs-5">Years Experience</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="fs-1 fw-bold text-info" id="stat-projects">0</div>
+        <div class="fs-5">Projects</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="fs-1 fw-bold text-info" id="stat-clients">0</div>
+        <div class="fs-5">Happy Clients</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="fs-1 fw-bold text-info" id="stat-coffee">0</div>
+        <div class="fs-5">Cups of Coffee</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END FUN FACTS -->
 
-        <!-- Business/Startup Interests Section -->
-        <section id="business" class="section py-6" data-aos="fade-up">
-            <div class="container">
-                <h2 class="display-5 text-center mb-5">🛍️ Business/Startup Interests</h2>
-                <div class="text-center fs-5">
-                    While I'm doing stuff, I'm always looking to support small local businesses achieving their goals as a freelancer.<br>
-                    <strong>Need some help? <a href="#contact" class="text-info">Contact me :)</a></strong>
-                </div>
-            </div>
-        </section>
-
-        <!-- Mini Games Section (improved) -->
-        <section id="mini-games" class="section py-6" data-aos="fade-up">
-            <div class="container">
-                <h2 class="display-5 text-center mb-5">🎮 Mini Games (JavaScript Demos)</h2>
-                <div class="row g-4">
-                    <!-- Rock Paper Scissors (with emoji, larger buttons, score) -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 p-3 text-center">
-                            <h4 class="mb-3">Rock Paper Scissors</h4>
-                            <div id="rps-game">
-                                <div class="mb-2">
-                                    <button class="btn btn-primary btn-lg mx-1" onclick="playRPS('rock')">✊</button>
-                                    <button class="btn btn-primary btn-lg mx-1" onclick="playRPS('paper')">✋</button>
-                                    <button class="btn btn-primary btn-lg mx-1" onclick="playRPS('scissors')">✌️</button>
-                                </div>
-                                <div id="rps-result" class="mt-2 fw-bold"></div>
-                                <div id="rps-score" class="mt-1 small"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Number Guess (with range, feedback, and reset) -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 p-3 text-center">
-                            <h4 class="mb-3">Number Guess</h4>
-                            <div id="guess-game">
-                                <input type="number" id="guess-input" class="form-control form-control-lg mb-2 text-center" placeholder="1-20" min="1" max="20" style="width:100px;display:inline-block;">
-                                <button class="btn btn-primary btn-lg" onclick="checkGuess()">Guess</button>
-                                <div id="guess-result" class="mt-2 fw-bold"></div>
-                                <button class="btn btn-outline-primary btn-sm mt-2" onclick="resetGuess()">Restart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Memory Flip (larger, emoji, fun colors) -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 p-3 text-center">
-                            <h4 class="mb-3">Memory Flip</h4>
-                            <div id="memory-game" class="d-flex flex-wrap gap-2 justify-content-center" style="max-width:220px;"></div>
-                            <div id="memory-result" class="mt-2 fw-bold"></div>
-                            <button class="btn btn-outline-primary btn-sm mt-2" onclick="initMemory()">Restart</button>
-                        </div>
-                    </div>
-                    <!-- Tic Tac Toe (bigger, emoji, fun colors) -->
-                    <div class="col-md-6 col-lg-6">
-                        <div class="card h-100 p-3 text-center">
-                            <h4 class="mb-3">Tic Tac Toe</h4>
-                            <div id="ttt-board" class="d-flex flex-wrap justify-content-center" style="width:180px;"></div>
-                            <div id="ttt-result" class="mt-2 fw-bold"></div>
-                            <button class="btn btn-outline-primary btn-sm mt-2" onclick="resetTTT()">Restart</button>
-                        </div>
-                    </div>
-                    <!-- Whack-a-Mole (bigger, fun, emoji, timer bar) -->
-                    <div class="col-md-6 col-lg-6">
-                        <div class="card h-100 p-3 text-center">
-                            <h4 class="mb-3">Whack-a-Mole</h4>
-                            <div id="wam-board" class="d-flex flex-wrap justify-content-center" style="width:180px;"></div>
-                            <div id="wam-score" class="mt-2 fw-bold"></div>
-                            <div class="progress my-2" style="height: 10px;">
-                                <div id="wam-timerbar" class="progress-bar bg-info" style="width:0%"></div>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm mt-2" onclick="startWAM()">Start</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Press & Media Section (premium, spaced, interactive) -->
-        <section id="press-media" class="section py-6 bg-light" data-aos="fade-up">
-            <div class="container-lg">
-                <h2 class="display-5 text-center mb-5">📰 Press & Media</h2>
-                <div class="row row-cols-1 row-cols-md-2 g-5 justify-content-center">
-                    <!-- Article 1 -->
-                    <div class="col d-flex align-items-stretch">
-                        <div class="card shadow-lg border-0 h-100 press-card position-relative" data-aos="fade-up" data-aos-delay="100" style="transition:transform .2s,box-shadow .2s;">
-                            <span class="badge bg-info position-absolute top-0 end-0 m-3 px-3 py-2 fs-6 shadow">Featured</span>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title mb-2">
-                                    <i class="fas fa-newspaper text-info me-2"></i>
-                                    Glasgow Times
-                                </h5>
-                                <p class="card-text mb-3 fs-5">
-                                    <strong>Glasgow man denies City of Glasgow College computer hacks</strong>
-                                </p>
-                                
-                                <a href="https://www.glasgowtimes.co.uk/news/19014482.glasgow-man-denies-city-glasgow-college-computer-hacks/" target="_blank" rel="noopener" class="btn btn-link btn-sm text-info mt-2">
-                                    <i class="fas fa-external-link-alt me-1"></i> Read Full Article
-                                </a>
-                            </div>
-                            <div class="card-footer bg-transparent border-0 small text-muted">
-                                Published by Glasgow Times
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Article 2 -->
-                    <div class="col d-flex align-items-stretch">
-                        <div class="card shadow-lg border-0 h-100 press-card" data-aos="fade-up" data-aos-delay="200" style="transition:transform .2s,box-shadow .2s;">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title mb-2">
-                                    <i class="fas fa-user text-success me-2"></i>
-                                    Glasgow Live
-                                </h5>
-                                <p class="card-text mb-3 fs-5">
-                                    <strong>Glasgow Lives - Jason, 22, Easterhouse</strong>
-                                </p>
-                                <a href="https://www.glasgowlive.co.uk/news/glasgow-news/glasgow-lives-jason-22-easterhouse-28995640?fbclid=IwY2xjawIb6phleHRuA2FlbQIxMQABHW0FFJgPpH6swp12p7MwGCNrWiK5WKwQuS6A1qLNRZKSTz8_MSrCUTtuNw_aem_sARZqvUIk0AzZW6mDxLQEQ" target="_blank" rel="noopener" class="btn btn-link btn-sm text-info mt-2">
-                                    <i class="fas fa-external-link-alt me-1"></i> Read Full Article
-                                </a>
-                            </div>
-                            <div class="card-footer bg-transparent border-0 small text-muted">
-                                Published by Glasgow Live
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-5">
-                    <span class="text-secondary fs-5">Want to feature or interview me? <a href="#contact" class="text-info fw-semibold">Get in touch!</a></span>
-                </div>
-            </div>
-
-            <!-- Article 1 Modal -->
-            <div class="modal fade" id="pressModal1" tabindex="-1" aria-labelledby="pressModal1Label" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content bg-dark text-light">
-                        <div class="modal-header border-0">
-                            <h5 class="modal-title" id="pressModal1Label">
-                                Glasgow Times: Glasgow man denies City of Glasgow College computer hacks
-                            </h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <iframe src="https://www.glasgowtimes.co.uk/news/19014482.glasgow-man-denies-city-glasgow-college-computer-hacks/" style="width:100%;height:60vh;border:0;" title="Glasgow Times Article"></iframe>
-                        </div>
-                        <div class="modal-footer border-0">
-                            <a href="https://www.glasgowtimes.co.uk/news/19014482.glasgow-man-denies-city-glasgow-college-computer-hacks/" target="_blank" rel="noopener" class="btn btn-primary">
-                                <i class="fas fa-external-link-alt me-1"></i> Read on Glasgow Times
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Article 2 Modal -->
-            <div class="modal fade" id="pressModal2" tabindex="-1" aria-labelledby="pressModal2Label" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content bg-dark text-light">
-                        <div class="modal-header border-0">
-                            <h5 class="modal-title" id="pressModal2Label">
-                                Glasgow Live: Glasgow Lives - Jason, 22, Easterhouse
-                            </h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <iframe src="https://www.glasgowlive.co.uk/news/glasgow-news/glasgow-lives-jason-22-easterhouse-28995640?fbclid=IwY2xjawIb6phleHRuA2FlbQIxMQABHW0FFJgPpH6swp12p7MwGCNrWiK5WKwQuS6A1qLNRZKSTz8_MSrCUTtuNw_aem_sARZqvUIk0AzZW6mDxLQEQ" style="width:100%;height:60vh;border:0;" title="Glasgow Live Article"></iframe>
-                        </div>
-                        <div class="modal-footer border-0">
-                            <a href="https://www.glasgowlive.co.uk/news/glasgow-news/glasgow-lives-jason-22-easterhouse-28995640?fbclid=IwY2xjawIb6phleHRuA2FlbQIxMQABHW0FFJgPpH6swp12p7MwGCNrWiK5WKwQuS6A1qLNRZKSTz8_MSrCUTtuNw_aem_sARZqvUIk0AzZW6mDxLQEQ" target="_blank" rel="noopener" class="btn btn-primary">
-                                <i class="fas fa-external-link-alt me-1"></i> Read on Glasgow Live
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Fun Facts/Stats Section with Animated Counters -->
-        <section id="fun-facts" class="section py-6 bg-light" data-aos="fade-up">
-          <div class="container text-center">
-            <h2 class="display-5 mb-5">🚀 Quick Stats</h2>
-            <div class="row justify-content-center g-4">
-              <div class="col-6 col-md-3">
-                <div class="fs-1 fw-bold text-info" id="stat-years">0</div>
-                <div class="fs-5">Years Experience</div>
-              </div>
-              <div class="col-6 col-md-3">
-                <div class="fs-1 fw-bold text-info" id="stat-projects">0</div>
-                <div class="fs-5">Projects</div>
-              </div>
-              <div class="col-6 col-md-3">
-                <div class="fs-1 fw-bold text-info" id="stat-clients">0</div>
-                <div class="fs-5">Happy Clients</div>
-              </div>
-              <div class="col-6 col-md-3">
-                <div class="fs-1 fw-bold text-info" id="stat-coffee">0</div>
-                <div class="fs-5">Cups of Coffee</div>
-              </div>
-            </div>
+<!-- Press & Media Section (premium, spaced, interactive) -->
+<section id="press-media" class="section py-6 bg-light" data-aos="fade-up">
+  <div class="container-lg">
+    <h2 class="display-5 text-center mb-5">📰 Press & Media</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-5 justify-content-center">
+      <!-- Article 1 -->
+      <div class="col d-flex align-items-stretch">
+        <div class="card shadow-lg border-0 h-100 press-card position-relative" data-aos="fade-up" data-aos-delay="100" style="transition:transform .2s,box-shadow .2s;">
+          <span class="badge bg-info position-absolute top-0 end-0 m-3 px-3 py-2 fs-6 shadow">Featured</span>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title mb-2">
+              <i class="fas fa-newspaper text-info me-2"></i>
+              Glasgow Times
+            </h5>
+            <p class="card-text mb-3 fs-5">
+              <strong>Glasgow man denies City of Glasgow College computer hacks</strong>
+            </p>
+            <a href="https://www.glasgowtimes.co.uk/news/19014482.glasgow-man-denies-city-glasgow-college-computer-hacks/" target="_blank" rel="noopener" class="btn btn-link btn-sm text-info mt-2">
+              <i class="fas fa-external-link-alt me-1"></i> Read Full Article
+            </a>
           </div>
-        </section>
+          <div class="card-footer bg-transparent border-0 small text-muted">
+            Published by Glasgow Times
+          </div>
+        </div>
+      </div>
+      <!-- Article 2 -->
+      <div class="col d-flex align-items-stretch">
+        <div class="card shadow-lg border-0 h-100 press-card" data-aos="fade-up" data-aos-delay="200" style="transition:transform .2s,box-shadow .2s;">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title mb-2">
+              <i class="fas fa-user text-success me-2"></i>
+              Glasgow Live
+            </h5>
+            <p class="card-text mb-3 fs-5">
+              <strong>Glasgow Lives - Jason, 22, Easterhouse</strong>
+            </p>
+            <a href="https://www.glasgowlive.co.uk/news/glasgow-news/glasgow-lives-jason-22-easterhouse-28995640?fbclid=IwY2xjawIb6phleHRuA2FlbQIxMQABHW0FFJgPpH6swp12p7MwGCNrWiK5WKwQuS6A1qLNRZKSTz8_MSrCUTtuNw_aem_sARZqvUIk0AzZW6mDxLQEQ" target="_blank" rel="noopener" class="btn btn-link btn-sm text-info mt-2">
+              <i class="fas fa-external-link-alt me-1"></i> Read Full Article
+            </a>
+          </div>
+          <div class="card-footer bg-transparent border-0 small text-muted">
+            Published by Glasgow Live
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <span class="text-secondary fs-5">Want to feature or interview me? <a href="#contact" class="text-info fw-semibold">Get in touch!</a></span>
+    </div>
+  </div>
+</section>
+<!-- END PRESS & MEDIA -->
+
+<!-- Mini Games Section (improved) -->
+<section id="mini-games" class="section py-6" data-aos="fade-up">
+  <div class="container">
+    <h2 class="display-5 text-center mb-5">🎮 Mini Games (JavaScript Demos)</h2>
+    <div class="row g-4">
+      <!-- Rock Paper Scissors (with emoji, larger buttons, score) -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 p-3 text-center">
+          <h4 class="mb-3">Rock Paper Scissors</h4>
+          <div id="rps-game">
+            <div class="mb-2">
+              <button class="btn btn-primary btn-lg mx-1" onclick="playRPS('rock')">✊</button>
+              <button class="btn btn-primary btn-lg mx-1" onclick="playRPS('paper')">✋</button>
+              <button class="btn btn-primary btn-lg mx-1" onclick="playRPS('scissors')">✌️</button>
+            </div>
+            <div id="rps-result" class="mt-2 fw-bold"></div>
+            <div id="rps-score" class="mt-1 small"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Number Guess (with range, feedback, and reset) -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 p-3 text-center">
+          <h4 class="mb-3">Number Guess</h4>
+          <div id="guess-game">
+            <input type="number" id="guess-input" class="form-control form-control-lg mb-2 text-center" placeholder="1-20" min="1" max="20" style="width:100px;display:inline-block;">
+            <button class="btn btn-primary btn-lg" onclick="checkGuess()">Guess</button>
+            <div id="guess-result" class="mt-2 fw-bold"></div>
+            <button class="btn btn-outline-primary btn-sm mt-2" onclick="resetGuess()">Restart</button>
+          </div>
+        </div>
+      </div>
+      <!-- Memory Flip (larger, emoji, fun colors) -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 p-3 text-center">
+          <h4 class="mb-3">Memory Flip</h4>
+          <div id="memory-game" class="d-flex flex-wrap gap-2 justify-content-center" style="max-width:220px;"></div>
+          <div id="memory-result" class="mt-2 fw-bold"></div>
+          <button class="btn btn-outline-primary btn-sm mt-2" onclick="initMemory()">Restart</button>
+        </div>
+      </div>
+      <!-- Tic Tac Toe (bigger, emoji, fun colors) -->
+      <div class="col-md-6 col-lg-6">
+        <div class="card h-100 p-3 text-center">
+          <h4 class="mb-3">Tic Tac Toe</h4>
+          <div id="ttt-board" class="d-flex flex-wrap justify-content-center" style="width:180px;"></div>
+          <div id="ttt-result" class="mt-2 fw-bold"></div>
+          <button class="btn btn-outline-primary btn-sm mt-2" onclick="resetTTT()">Restart</button>
+        </div>
+      </div>
+      <!-- Whack-a-Mole (bigger, fun, emoji, timer bar) -->
+      <div class="col-md-6 col-lg-6">
+        <div class="card h-100 p-3 text-center">
+          <h4 class="mb-3">Whack-a-Mole</h4>
+          <div id="wam-board" class="d-flex flex-wrap justify-content-center" style="width:180px;"></div>
+          <div id="wam-score" class="mt-2 fw-bold"></div>
+          <div class="progress my-2" style="height: 10px;">
+            <div id="wam-timerbar" class="progress-bar bg-info" style="width:0%"></div>
+          </div>
+          <button class="btn btn-outline-primary btn-sm mt-2" onclick="startWAM()">Start</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END MINI GAMES -->
 
     </main>
 
@@ -866,6 +909,34 @@
 
     // --- End of Improved Mini Games JS ---
     </script>
+    <script>
+    // IMPROVED NAVBAR: SCROLLSPY & SMOOTH SCROLL
+    // Smooth scroll for navbar links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (this.hash) {
+          e.preventDefault();
+          document.querySelector(this.hash).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+    // Scrollspy highlight
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('main section, header.hero');
+      let scrollPos = window.scrollY + 120;
+      sections.forEach(sec => {
+        if (sec.offsetTop <= scrollPos && sec.offsetTop + sec.offsetHeight > scrollPos) {
+          document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+            link.classList.remove('active');
+            if (link.hash === '#' + sec.id) link.classList.add('active');
+          });
+        }
+      });
+    });
+    </script>
+    <script>AOS.init();</script>
+    <!-- POLISH: Add comments, improve spacing, and ensure accessibility throughout. -->
     <style>
     /* Visually hidden but focusable for skip link */
     .visually-hidden-focusable {
